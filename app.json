@@ -1,0 +1,14 @@
+{
+  "expo": {
+    "name": "DM Companion",
+    "slug": "dm-companion",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "scheme": "dmcompanion",
+    "userInterfaceStyle": "automatic",
+    "plugins": ["expo-router", "expo-sqlite", "expo-document-picker"],
+    "experiments": {"typedRoutes": true},
+    "ios": {"supportsTablet": true},
+    "android": {"package": "com.dmcompanion.app"}
+  }
+}

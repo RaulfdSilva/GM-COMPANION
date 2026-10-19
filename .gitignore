@@ -1,0 +1,73 @@
+# Dependencies and package-manager caches. Keep package-lock.json versioned.
+node_modules/
+.npm/
+.pnpm-store/
+
+# Expo, Metro and generated native projects (managed workflow).
+.expo/
+.expo-shared/
+dist/
+web-build/
+.metro-health-check*
+.cache/
+/android/
+/ios/
+*.jsbundle
+*.hbc
+
+# Tests, compiler caches and logs.
+coverage/
+.vitest/
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# Local environment and authentication. Only explicit examples may be committed.
+.env
+.env.*
+!.env.example
+!.env.*.example
+.npmrc
+.netrc
+.git-credentials
+credentials.json
+service-account*.json
+secrets/
+.ssh/
+
+# Signing keys and mobile service configuration.
+*.pem
+*.key
+*.p12
+*.p8
+*.keystore
+*.jks
+*.mobileprovision
+google-services.json
+GoogleService-Info.plist
+
+# Local campaign databases and private imported content.
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+private-data/
+backups/
+dm-companion-transfer*.zip
+dm-companion-before-git*.zip
+
+# Operating systems and editors.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# expo-env.d.ts is intentionally versioned: it already contains the project's
+# static Expo type reference. Generated Router types remain under .expo/.

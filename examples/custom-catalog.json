@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "demo-common-0",
+      "name": "Elixir da Centelha",
+      "rarity": "common",
+      "category": "Potion",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-1",
+      "name": "Anel da Centelha",
+      "rarity": "common",
+      "category": "Ring",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-2",
+      "name": "Bastão da Centelha",
+      "rarity": "common",
+      "category": "Rod",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-3",
+      "name": "Pergaminho da Centelha",
+      "rarity": "common",
+      "category": "Scroll",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "scroll",
+        "inscriptionCopper": null
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-4",
+      "name": "Cajado da Centelha",
+      "rarity": "common",
+      "category": "Staff",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-5",
+      "name": "Varinha da Centelha",
+      "rarity": "common",
+      "category": "Wand",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-6",
+      "name": "Lâmina da Centelha",
+      "rarity": "common",
+      "category": "Weapon",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Lâmina demonstrativa",
+        "costCopper": 1500
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-7",
+      "name": "Armadura da Centelha",
+      "rarity": "common",
+      "category": "Armor",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Armadura demonstrativa",
+        "costCopper": 5000
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-8",
+      "name": "Amuleto da Centelha",
+      "rarity": "common",
+      "category": "Wondrous Item",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    }
+  ],
+  "tables": [
+    {
+      "id": "demo-arcana-common",
+      "name": "Arcana • common (demonstração)",
+      "rarity": "common",
+      "theme": "Arcana",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-arcana-common",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-common-blade"
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-8",
+            "variant": null
+          }
+        }
+      ]
+    }
+  ],
+  "resolutions": [
+    {
+      "id": "demo-common-blade",
+      "name": "Acabamento da lâmina (original)",
+      "sides": 6,
+      "complete": true,
+      "entries": [
+        {
+          "min": 1,
+          "max": 4,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-6",
+            "variant": {
+              "label": "Acabamento de cobre",
+              "baseEquipment": null,
+              "additionalCostCopper": 100
+            }
+          }
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-6",
+            "variant": {
+              "label": "Acabamento de prata",
+              "baseEquipment": null,
+              "additionalCostCopper": 1000
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

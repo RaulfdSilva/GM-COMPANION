@@ -1,0 +1,3509 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "demo-common-0",
+      "name": "Elixir da Centelha",
+      "rarity": "common",
+      "category": "Potion",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-1",
+      "name": "Anel da Centelha",
+      "rarity": "common",
+      "category": "Ring",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-2",
+      "name": "Bastão da Centelha",
+      "rarity": "common",
+      "category": "Rod",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-3",
+      "name": "Pergaminho da Centelha",
+      "rarity": "common",
+      "category": "Scroll",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "scroll",
+        "inscriptionCopper": null
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-4",
+      "name": "Cajado da Centelha",
+      "rarity": "common",
+      "category": "Staff",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-5",
+      "name": "Varinha da Centelha",
+      "rarity": "common",
+      "category": "Wand",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-6",
+      "name": "Lâmina da Centelha",
+      "rarity": "common",
+      "category": "Weapon",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Lâmina demonstrativa",
+        "costCopper": 1500
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-7",
+      "name": "Armadura da Centelha",
+      "rarity": "common",
+      "category": "Armor",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Armadura demonstrativa",
+        "costCopper": 5000
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-common-8",
+      "name": "Amuleto da Centelha",
+      "rarity": "common",
+      "category": "Wondrous Item",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-uncommon-0",
+      "name": "Elixir da Bruma",
+      "rarity": "uncommon",
+      "category": "Potion",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-uncommon-1",
+      "name": "Anel da Bruma",
+      "rarity": "uncommon",
+      "category": "Ring",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-uncommon-2",
+      "name": "Bastão da Bruma",
+      "rarity": "uncommon",
+      "category": "Rod",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-uncommon-3",
+      "name": "Pergaminho da Bruma",
+      "rarity": "uncommon",
+      "category": "Scroll",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "scroll",
+        "inscriptionCopper": null
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-uncommon-4",
+      "name": "Cajado da Bruma",
+      "rarity": "uncommon",
+      "category": "Staff",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-uncommon-5",
+      "name": "Varinha da Bruma",
+      "rarity": "uncommon",
+      "category": "Wand",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-uncommon-6",
+      "name": "Lâmina da Bruma",
+      "rarity": "uncommon",
+      "category": "Weapon",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Lâmina demonstrativa",
+        "costCopper": 1500
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-uncommon-7",
+      "name": "Armadura da Bruma",
+      "rarity": "uncommon",
+      "category": "Armor",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Armadura demonstrativa",
+        "costCopper": 5000
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-uncommon-8",
+      "name": "Amuleto da Bruma",
+      "rarity": "uncommon",
+      "category": "Wondrous Item",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-rare-0",
+      "name": "Elixir da Aurora",
+      "rarity": "rare",
+      "category": "Potion",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-rare-1",
+      "name": "Anel da Aurora",
+      "rarity": "rare",
+      "category": "Ring",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-rare-2",
+      "name": "Bastão da Aurora",
+      "rarity": "rare",
+      "category": "Rod",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-rare-3",
+      "name": "Pergaminho da Aurora",
+      "rarity": "rare",
+      "category": "Scroll",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "scroll",
+        "inscriptionCopper": null
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-rare-4",
+      "name": "Cajado da Aurora",
+      "rarity": "rare",
+      "category": "Staff",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-rare-5",
+      "name": "Varinha da Aurora",
+      "rarity": "rare",
+      "category": "Wand",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-rare-6",
+      "name": "Lâmina da Aurora",
+      "rarity": "rare",
+      "category": "Weapon",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Lâmina demonstrativa",
+        "costCopper": 1500
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-rare-7",
+      "name": "Armadura da Aurora",
+      "rarity": "rare",
+      "category": "Armor",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Armadura demonstrativa",
+        "costCopper": 5000
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-rare-8",
+      "name": "Amuleto da Aurora",
+      "rarity": "rare",
+      "category": "Wondrous Item",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-veryRare-0",
+      "name": "Elixir da Firmamento",
+      "rarity": "veryRare",
+      "category": "Potion",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-veryRare-1",
+      "name": "Anel da Firmamento",
+      "rarity": "veryRare",
+      "category": "Ring",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-veryRare-2",
+      "name": "Bastão da Firmamento",
+      "rarity": "veryRare",
+      "category": "Rod",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-veryRare-3",
+      "name": "Pergaminho da Firmamento",
+      "rarity": "veryRare",
+      "category": "Scroll",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "scroll",
+        "inscriptionCopper": null
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-veryRare-4",
+      "name": "Cajado da Firmamento",
+      "rarity": "veryRare",
+      "category": "Staff",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-veryRare-5",
+      "name": "Varinha da Firmamento",
+      "rarity": "veryRare",
+      "category": "Wand",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-veryRare-6",
+      "name": "Lâmina da Firmamento",
+      "rarity": "veryRare",
+      "category": "Weapon",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Lâmina demonstrativa",
+        "costCopper": 1500
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-veryRare-7",
+      "name": "Armadura da Firmamento",
+      "rarity": "veryRare",
+      "category": "Armor",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Armadura demonstrativa",
+        "costCopper": 5000
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-veryRare-8",
+      "name": "Amuleto da Firmamento",
+      "rarity": "veryRare",
+      "category": "Wondrous Item",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-legendary-0",
+      "name": "Elixir da Eternidade",
+      "rarity": "legendary",
+      "category": "Potion",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-legendary-1",
+      "name": "Anel da Eternidade",
+      "rarity": "legendary",
+      "category": "Ring",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-legendary-2",
+      "name": "Bastão da Eternidade",
+      "rarity": "legendary",
+      "category": "Rod",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-legendary-3",
+      "name": "Pergaminho da Eternidade",
+      "rarity": "legendary",
+      "category": "Scroll",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": true,
+      "attunement": false,
+      "pricing": {
+        "kind": "scroll",
+        "inscriptionCopper": null
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-legendary-4",
+      "name": "Cajado da Eternidade",
+      "rarity": "legendary",
+      "category": "Staff",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-legendary-5",
+      "name": "Varinha da Eternidade",
+      "rarity": "legendary",
+      "category": "Wand",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": true,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-legendary-6",
+      "name": "Lâmina da Eternidade",
+      "rarity": "legendary",
+      "category": "Weapon",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Lâmina demonstrativa",
+        "costCopper": 1500
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-legendary-7",
+      "name": "Armadura da Eternidade",
+      "rarity": "legendary",
+      "category": "Armor",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": {
+        "name": "Armadura demonstrativa",
+        "costCopper": 5000
+      },
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    },
+    {
+      "id": "demo-legendary-8",
+      "name": "Amuleto da Eternidade",
+      "rarity": "legendary",
+      "category": "Wondrous Item",
+      "themes": [
+        "Arcana",
+        "Armaments",
+        "Implements",
+        "Relics"
+      ],
+      "consumable": false,
+      "attunement": false,
+      "pricing": {
+        "kind": "reference"
+      },
+      "baseEquipment": null,
+      "additionalCostCopper": 0,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "description": "Objeto fictício para demonstrar sorteio e registro. Efeitos mecânicos devem ser definidos pelo Mestre.",
+      "variantMetadata": {}
+    }
+  ],
+  "tables": [
+    {
+      "id": "demo-arcana-common",
+      "name": "Arcana • common (demonstração)",
+      "rarity": "common",
+      "theme": "Arcana",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-arcana-common",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-common-blade"
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-common",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-armaments-common",
+      "name": "Armaments • common (demonstração)",
+      "rarity": "common",
+      "theme": "Armaments",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-armaments-common",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-common",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-common",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-common",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-common",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-common",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-common",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-common-blade"
+          }
+        },
+        {
+          "tableId": "demo-armaments-common",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-common",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-implements-common",
+      "name": "Implements • common (demonstração)",
+      "rarity": "common",
+      "theme": "Implements",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-implements-common",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-common",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-common",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-common",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-common",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-common",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-common",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-common-blade"
+          }
+        },
+        {
+          "tableId": "demo-implements-common",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-common",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-relics-common",
+      "name": "Relics • common (demonstração)",
+      "rarity": "common",
+      "theme": "Relics",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-relics-common",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-common",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-common",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-common",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-common",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-common",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-common",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-common-blade"
+          }
+        },
+        {
+          "tableId": "demo-relics-common",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-common",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-arcana-uncommon",
+      "name": "Arcana • uncommon (demonstração)",
+      "rarity": "uncommon",
+      "theme": "Arcana",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-arcana-uncommon",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-uncommon",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-uncommon",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-uncommon",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-uncommon",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-uncommon",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-uncommon",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-uncommon-blade"
+          }
+        },
+        {
+          "tableId": "demo-arcana-uncommon",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-uncommon",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-armaments-uncommon",
+      "name": "Armaments • uncommon (demonstração)",
+      "rarity": "uncommon",
+      "theme": "Armaments",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-armaments-uncommon",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-uncommon",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-uncommon",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-uncommon",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-uncommon",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-uncommon",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-uncommon",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-uncommon-blade"
+          }
+        },
+        {
+          "tableId": "demo-armaments-uncommon",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-uncommon",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-implements-uncommon",
+      "name": "Implements • uncommon (demonstração)",
+      "rarity": "uncommon",
+      "theme": "Implements",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-implements-uncommon",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-uncommon",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-uncommon",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-uncommon",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-uncommon",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-uncommon",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-uncommon",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-uncommon-blade"
+          }
+        },
+        {
+          "tableId": "demo-implements-uncommon",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-uncommon",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-relics-uncommon",
+      "name": "Relics • uncommon (demonstração)",
+      "rarity": "uncommon",
+      "theme": "Relics",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-relics-uncommon",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-uncommon",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-uncommon",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-uncommon",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-uncommon",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-uncommon",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-uncommon",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-uncommon-blade"
+          }
+        },
+        {
+          "tableId": "demo-relics-uncommon",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-uncommon",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-arcana-rare",
+      "name": "Arcana • rare (demonstração)",
+      "rarity": "rare",
+      "theme": "Arcana",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-arcana-rare",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-rare",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-rare",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-rare",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-rare",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-rare",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-rare",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-rare-blade"
+          }
+        },
+        {
+          "tableId": "demo-arcana-rare",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-rare",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-armaments-rare",
+      "name": "Armaments • rare (demonstração)",
+      "rarity": "rare",
+      "theme": "Armaments",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-armaments-rare",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-rare",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-rare",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-rare",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-rare",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-rare",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-rare",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-rare-blade"
+          }
+        },
+        {
+          "tableId": "demo-armaments-rare",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-rare",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-implements-rare",
+      "name": "Implements • rare (demonstração)",
+      "rarity": "rare",
+      "theme": "Implements",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-implements-rare",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-rare",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-rare",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-rare",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-rare",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-rare",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-rare",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-rare-blade"
+          }
+        },
+        {
+          "tableId": "demo-implements-rare",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-rare",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-relics-rare",
+      "name": "Relics • rare (demonstração)",
+      "rarity": "rare",
+      "theme": "Relics",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-relics-rare",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-rare",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-rare",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-rare",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-rare",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-rare",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-rare",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-rare-blade"
+          }
+        },
+        {
+          "tableId": "demo-relics-rare",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-rare",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-arcana-veryRare",
+      "name": "Arcana • veryRare (demonstração)",
+      "rarity": "veryRare",
+      "theme": "Arcana",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-arcana-veryRare",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-veryRare",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-veryRare",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-veryRare",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-veryRare",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-veryRare",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-veryRare",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-veryRare-blade"
+          }
+        },
+        {
+          "tableId": "demo-arcana-veryRare",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-veryRare",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-armaments-veryRare",
+      "name": "Armaments • veryRare (demonstração)",
+      "rarity": "veryRare",
+      "theme": "Armaments",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-armaments-veryRare",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-veryRare",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-veryRare",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-veryRare",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-veryRare",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-veryRare",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-veryRare",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-veryRare-blade"
+          }
+        },
+        {
+          "tableId": "demo-armaments-veryRare",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-veryRare",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-implements-veryRare",
+      "name": "Implements • veryRare (demonstração)",
+      "rarity": "veryRare",
+      "theme": "Implements",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-implements-veryRare",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-veryRare",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-veryRare",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-veryRare",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-veryRare",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-veryRare",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-veryRare",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-veryRare-blade"
+          }
+        },
+        {
+          "tableId": "demo-implements-veryRare",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-veryRare",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-relics-veryRare",
+      "name": "Relics • veryRare (demonstração)",
+      "rarity": "veryRare",
+      "theme": "Relics",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-relics-veryRare",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-veryRare",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-veryRare",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-veryRare",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-veryRare",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-veryRare",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-veryRare",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-veryRare-blade"
+          }
+        },
+        {
+          "tableId": "demo-relics-veryRare",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-veryRare",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-arcana-legendary",
+      "name": "Arcana • legendary (demonstração)",
+      "rarity": "legendary",
+      "theme": "Arcana",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-arcana-legendary",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-legendary",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-legendary",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-legendary",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-legendary",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-legendary",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-legendary",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-legendary-blade"
+          }
+        },
+        {
+          "tableId": "demo-arcana-legendary",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-arcana-legendary",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-armaments-legendary",
+      "name": "Armaments • legendary (demonstração)",
+      "rarity": "legendary",
+      "theme": "Armaments",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-armaments-legendary",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-legendary",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-legendary",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-legendary",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-legendary",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-legendary",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-legendary",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-legendary-blade"
+          }
+        },
+        {
+          "tableId": "demo-armaments-legendary",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-armaments-legendary",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-implements-legendary",
+      "name": "Implements • legendary (demonstração)",
+      "rarity": "legendary",
+      "theme": "Implements",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-implements-legendary",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-legendary",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-legendary",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-legendary",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-legendary",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-legendary",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-legendary",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-legendary-blade"
+          }
+        },
+        {
+          "tableId": "demo-implements-legendary",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-implements-legendary",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-8",
+            "variant": null
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-relics-legendary",
+      "name": "Relics • legendary (demonstração)",
+      "rarity": "legendary",
+      "theme": "Relics",
+      "complete": true,
+      "source": {
+        "name": "DM Companion — demonstração original",
+        "license": "CC0-1.0",
+        "kind": "original",
+        "attribution": "Conteúdo demonstrativo original criado para este projeto. Não reproduz tabelas oficiais."
+      },
+      "entries": [
+        {
+          "tableId": "demo-relics-legendary",
+          "min": 1,
+          "max": 20,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-0",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-legendary",
+          "min": 21,
+          "max": 35,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-1",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-legendary",
+          "min": 36,
+          "max": 48,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-2",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-legendary",
+          "min": 49,
+          "max": 60,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-3",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-legendary",
+          "min": 61,
+          "max": 70,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-4",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-legendary",
+          "min": 71,
+          "max": 79,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-5",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-legendary",
+          "min": 80,
+          "max": 87,
+          "target": {
+            "kind": "resolution",
+            "resolutionId": "demo-legendary-blade"
+          }
+        },
+        {
+          "tableId": "demo-relics-legendary",
+          "min": 88,
+          "max": 94,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-7",
+            "variant": null
+          }
+        },
+        {
+          "tableId": "demo-relics-legendary",
+          "min": 95,
+          "max": 100,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-8",
+            "variant": null
+          }
+        }
+      ]
+    }
+  ],
+  "resolutions": [
+    {
+      "id": "demo-common-blade",
+      "name": "Acabamento da lâmina (original)",
+      "sides": 6,
+      "complete": true,
+      "entries": [
+        {
+          "min": 1,
+          "max": 4,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-6",
+            "variant": {
+              "label": "Acabamento de cobre",
+              "baseEquipment": null,
+              "additionalCostCopper": 100
+            }
+          }
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-common-6",
+            "variant": {
+              "label": "Acabamento de prata",
+              "baseEquipment": null,
+              "additionalCostCopper": 1000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-uncommon-blade",
+      "name": "Acabamento da lâmina (original)",
+      "sides": 6,
+      "complete": true,
+      "entries": [
+        {
+          "min": 1,
+          "max": 4,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-6",
+            "variant": {
+              "label": "Acabamento de cobre",
+              "baseEquipment": null,
+              "additionalCostCopper": 100
+            }
+          }
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-uncommon-6",
+            "variant": {
+              "label": "Acabamento de prata",
+              "baseEquipment": null,
+              "additionalCostCopper": 1000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-rare-blade",
+      "name": "Acabamento da lâmina (original)",
+      "sides": 6,
+      "complete": true,
+      "entries": [
+        {
+          "min": 1,
+          "max": 4,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-6",
+            "variant": {
+              "label": "Acabamento de cobre",
+              "baseEquipment": null,
+              "additionalCostCopper": 100
+            }
+          }
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-rare-6",
+            "variant": {
+              "label": "Acabamento de prata",
+              "baseEquipment": null,
+              "additionalCostCopper": 1000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-veryRare-blade",
+      "name": "Acabamento da lâmina (original)",
+      "sides": 6,
+      "complete": true,
+      "entries": [
+        {
+          "min": 1,
+          "max": 4,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-6",
+            "variant": {
+              "label": "Acabamento de cobre",
+              "baseEquipment": null,
+              "additionalCostCopper": 100
+            }
+          }
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-veryRare-6",
+            "variant": {
+              "label": "Acabamento de prata",
+              "baseEquipment": null,
+              "additionalCostCopper": 1000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "demo-legendary-blade",
+      "name": "Acabamento da lâmina (original)",
+      "sides": 6,
+      "complete": true,
+      "entries": [
+        {
+          "min": 1,
+          "max": 4,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-6",
+            "variant": {
+              "label": "Acabamento de cobre",
+              "baseEquipment": null,
+              "additionalCostCopper": 100
+            }
+          }
+        },
+        {
+          "min": 5,
+          "max": 6,
+          "target": {
+            "kind": "item",
+            "itemId": "demo-legendary-6",
+            "variant": {
+              "label": "Acabamento de prata",
+              "baseEquipment": null,
+              "additionalCostCopper": 1000
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
