@@ -79,3 +79,15 @@ Essa classificação é uma adaptação transparente do aplicativo, não um bloq
 Sorteio não é concessão. Cada resultado concedido cria um registro com uma unidade de item, campanha, nome/raridade/variante e valor como snapshot, nível escolhido no sorteio, data e observações. A concessão do mesmo resultado tem ID estável para impedir duplicação por cliques repetidos. Concessões múltiplas são atômicas.
 
 Correções alteram o snapshot histórico sem editar o catálogo. Exclusões removem a unidade da contagem; a interface solicita confirmação específica. Corrigir o grupo não modifica retroativamente níveis das concessões anteriores.
+
+## Garantias reforçadas pela auditoria
+
+- Cada parcela monetária deve ser um inteiro seguro não negativo; parcelas inválidas não podem se cancelar para formar um total aparentemente válido. Isso é verificado também pelo núcleo independente, além do Zod.
+- A exibição e edição de PO preservam o resto em cobre, inclusive no limite de `Number.MAX_SAFE_INTEGER`. Locale é aplicado apenas à parte inteira.
+- Modos de geração, IDs e data do resultado são validados; um identificador vazio/repetido invalida o lote. Uma resolução com número de faces inválido não é percorrida.
+- O caso de uso de geração filtra o histórico pela campanha. Histórico indisponível não equivale a zero recompensas. Níveis inválidos no histórico ou totais inseguros produzem dados insuficientes.
+- Datas de concessão devem ser ISO 8601 com horário e fuso explícito. Datas inexistentes e formatos ambíguos são recusados; novas gravações são normalizadas para UTC e o histórico é ordenado pelo instante real. Registros antigos inválidos são preservados e sinalizados, sem conversão presumida.
+- A data de criação da campanha permanece imutável em atualizações, e o repositório retorna o valor efetivamente persistido. A edição dos nomes do grupo preserva IDs por nome/posição disponível, em vez de reassociar todos apenas pelo índice.
+- O limite de importação é de 2.000.000 bytes UTF-8, não caracteres. Nomes vazios após trim são inválidos. Nomes de itens de até 1000 caracteres aceitos no catálogo também podem ser registrados no histórico.
+
+As matrizes, valores de referência, pesos demonstrativos e liberdade de decisão do Mestre não foram alterados.

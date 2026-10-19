@@ -1,5 +1,6 @@
+import { parseGoldInput } from '../src/modules/treasure/presentation/money.ts';
 import assert from 'node:assert/strict';
-import { calculateItemValue, parseGoldInput } from '../src/modules/treasure/domain/economy.ts';
+import { calculateItemValue } from '../src/modules/treasure/domain/economy.ts';
 import { chooseWeighted, generateTreasure } from '../src/modules/treasure/domain/generator.ts';
 import { LEVEL_BANDS, selectRarity } from '../src/modules/treasure/domain/rules.ts';
 import { validateCatalog } from '../src/modules/treasure/domain/catalog-validation.ts';
@@ -83,11 +84,11 @@ export const domainCases: readonly TestCase[] = [
     assert.equal(generation([0], { ...configuration, mode: 'faithful', categories: ['Potion'] }).ok, false);
     assert.equal(generation([0], { ...configuration, mode: 'faithful', maxValueCopper: 10000 }).ok, false);
   } },
-  { name: 'modo fiel respeita todas as fronteiras inclusivas do d100', run() {
-    for (const entry of catalog.tables[0]?.entries ?? []) for (const face of [entry.min, entry.max]) {
-      const result = generation([(face - 0.5) / 100, 0], { ...configuration, mode: 'faithful', categories: CATEGORIES });
+  { name: 'modo fiel respeita todas as fronteiras inclusivas das 20 tabelas d100', run() {
+    for (const table of catalog.tables) for (const entry of table.entries) for (const face of [entry.min, entry.max]) {
+      const result = generation([(face - 0.5) / 100, 0], { ...configuration, mode: 'faithful', theme: table.theme, rarity: { mode: 'manual', value: table.rarity }, categories: CATEGORIES });
       assert.ok(result.ok); assert.equal(result.value.items[0]?.rolls[0], face);
-      const expected = entry.target.kind === 'item' ? entry.target.itemId : 'demo-common-6';
+      const expected = entry.target.kind === 'item' ? entry.target.itemId : `demo-${table.rarity}-6`;
       assert.equal(result.value.items[0]?.item.id, expected);
     }
   } },
@@ -109,7 +110,7 @@ export const domainCases: readonly TestCase[] = [
     assert.ok(!result.ok); assert.equal(result.error.kind, 'empty'); assert.equal(calls, 1);
   } },
   { name: 'quantidade inválida e checklist vazio são rejeitados', run() {
-    for (const quantity of [0, 101, 1.2]) assert.equal(generation([0], { ...configuration, quantity }).ok, false);
+    for (const quantity of [-1, 0, 101, 1.2, NaN, Infinity]) assert.equal(generation([0], { ...configuration, quantity }).ok, false);
     assert.equal(generation([0], { ...configuration, categories: [] }).ok, false);
   } },
   { name: 'catálogo demonstrativo possui 20 tabelas válidas sem duplicar identidades', run() {

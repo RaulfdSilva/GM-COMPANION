@@ -3,7 +3,7 @@ import { useApp } from '../../../shared/app-context';
 import { AppPage } from '../../../shared/components/app-page';
 import { Button, Card, Copy, Heading, Notice } from '../../../shared/components/ui';
 import { categoryLabels, rarityLabels } from '../../../shared/labels';
-import { formatCopper } from '../domain/economy';
+import { formatCopper } from './money';
 const assessmentLabels = { withinReference: 'Dentro da referência quantitativa', aboveReference: 'Acima da referência quantitativa', unusual: 'Incomum nesta faixa de níveis', insufficientData: 'Dados insuficientes' };
 export function ResultScreen() {
   const app = useApp(); const generation = app.generation;

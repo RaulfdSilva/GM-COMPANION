@@ -1,3 +1,4 @@
+import { isPartyLevel } from '../../../shared/rules/party-level.ts';
 import { failure, success } from '../../../shared/types/result.ts';
 import type { Result } from '../../../shared/types/result.ts';
 import { RARITIES } from './models.ts';
@@ -15,11 +16,12 @@ export const REFERENCE_COPPER: Readonly<Record<Rarity, number>> = {
   legendary: 200000 * COPPER_PER_GOLD,
 };
 export type RandomSource = () => number;
-export const levelBand = (level: number) => Number.isInteger(level)
+export const levelBand = (level: number) => isPartyLevel(level)
   ? LEVEL_BANDS.find((band) => level >= band.min && level <= band.max) : undefined;
 export function rollDie(sides: number, random: RandomSource): Result<number> {
+  if (!Number.isSafeInteger(sides) || sides < 1) return failure('validation', 'O dado deve ter um número inteiro positivo de faces.');
   const value = random();
-  if (!Number.isSafeInteger(sides) || sides < 1 || !Number.isFinite(value) || value < 0 || value >= 1)
+  if (!Number.isFinite(value) || value < 0 || value >= 1)
     return failure('validation', 'Fonte aleatória inválida: esperado um valor entre 0 (inclusivo) e 1 (exclusivo).');
   return success(Math.floor(value * sides) + 1);
 }

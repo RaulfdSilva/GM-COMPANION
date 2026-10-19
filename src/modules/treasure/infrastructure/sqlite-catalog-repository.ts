@@ -1,10 +1,9 @@
 import type { AppDatabase } from '../../../database/connection.ts';
 import type { Result } from '../../../shared/types/result.ts';
 import { errorMessage, failure, success } from '../../../shared/types/result.ts';
-import type { TreasureCatalog } from '../domain/models.ts';
+import type { CatalogRepository, StoredCatalog } from '../application/catalog-repository.ts';
 import { importCatalog, importCatalogText } from './catalog-importer.ts';
-export type StoredCatalog = Readonly<{ id: string; name: string; catalog: TreasureCatalog }>;
-export function createCatalogRepository(database: AppDatabase) {
+export function createCatalogRepository(database: AppDatabase): CatalogRepository {
   return {
     async list(): Promise<Result<readonly StoredCatalog[]>> {
       try {

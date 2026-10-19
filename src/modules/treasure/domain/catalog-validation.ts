@@ -1,3 +1,4 @@
+import { pricingIssues } from './economy.ts';
 import type { ItemTarget, TreasureCatalog, TreasureTable } from './models.ts';
 import { failure, success } from '../../../shared/types/result.ts';
 import type { Result } from '../../../shared/types/result.ts';
@@ -27,25 +28,29 @@ export function validateCatalog(catalog: TreasureCatalog): Result<TreasureCatalo
   for (const [label, records] of [['item', catalog.items], ['tabela', catalog.tables], ['resolução', catalog.resolutions]] as const) {
     const ids = new Set<string>();
     for (const record of records) {
+      if (!record.id.trim()) issues.push(`ID de ${label} vazio.`);
       if (ids.has(record.id)) issues.push(`ID de ${label} duplicado: ${record.id}.`);
       ids.add(record.id);
     }
   }
   for (const item of catalog.items) {
-    if (item.pricing.kind === 'scroll' && item.category !== 'Scroll')
-      issues.push(`${item.id}: custo de inscrição só pode ser aplicado a pergaminhos.`);
+    if (!item.name.trim()) issues.push(`${item.id}: nome do item vazio.`);
+    issues.push(...pricingIssues(item).map((issue) => `${item.id}: ${issue}`));
   }
   const items = new Map(catalog.items.map((item) => [item.id, item]));
   const resolutions = new Map(catalog.resolutions.map((resolution) => [resolution.id, resolution]));
   const checkTarget = (target: ItemTarget, table?: TreasureTable) => {
     const item = items.get(target.itemId);
     if (!item) { issues.push(`Referência inexistente: ${target.itemId}.`); return; }
+    issues.push(...pricingIssues(item, target.variant).map((issue) => `${item.id}: ${issue}`));
     if (table && (item.rarity !== table.rarity || !item.themes.includes(table.theme)))
       issues.push(`${table.id}: raridade ou tema incoerente para ${item.id}.`);
   };
   for (const resolution of catalog.resolutions) {
-    if (!Number.isInteger(resolution.sides) || resolution.sides < 1 || resolution.sides > 100)
+    if (!Number.isInteger(resolution.sides) || resolution.sides < 1 || resolution.sides > 100) {
       issues.push(`${resolution.id}: dado de resolução deve possuir entre 1 e 100 faces.`);
+      continue;
+    }
     issues.push(...validateIntervals(resolution.entries, resolution.sides, resolution.complete, resolution.id));
     resolution.entries.forEach((entry) => checkTarget(entry.target));
   }

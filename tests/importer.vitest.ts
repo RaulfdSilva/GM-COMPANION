@@ -14,6 +14,10 @@ describe('importação Zod e persistência', () => {
     expect(importCatalog({ ...catalog, items: catalog.items.map((item) => ({ ...item, additionalCostCopper: 0.5 })) }).ok).toBe(false);
     expect(importCatalog({ ...catalog, items: catalog.items.slice(1) }).ok).toBe(false);
   });
+  test('rejeita texto UTF-8 acima de 2 MB e nomes vazios', () => {
+    expect(importCatalogText('é'.repeat(1_000_001)).ok).toBe(false);
+    expect(importCatalog({ ...catalog, items: catalog.items.map((item) => ({ ...item, name: ' ' })) }).ok).toBe(false);
+  });
   test('importação é persistente e catálogo inválido não é inserido', async () => {
     const database = openNodeDatabase();
     try { await migrateDatabase(database); const repository = createCatalogRepository(database); const record = { id: 'private-1', name: 'Mesa privada', catalog };

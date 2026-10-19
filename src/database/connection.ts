@@ -6,5 +6,6 @@ export interface SqlConnection {
   getFirstAsync<T>(sql: string, ...params: SqlValue[]): Promise<T | null>;
 }
 export interface AppDatabase extends SqlConnection {
+  closeAsync(): Promise<void>;
   transaction<T>(work: (connection: SqlConnection) => Promise<T>): Promise<T>;
 }

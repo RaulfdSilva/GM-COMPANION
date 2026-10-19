@@ -14,6 +14,6 @@ export function CampaignsScreen() {
     <Card><Heading>Uma nova jornada</Heading><Field label="Nome da campanha" value={name} onChangeText={setName} maxLength={120} placeholder="As ruínas da alvorada" /><Button title="Criar e configurar grupo" disabled={app.busy} onPress={() => void create()} /></Card>
     <Heading>Suas campanhas</Heading>
     {!app.session.campaigns.length && <Copy muted>Nenhuma campanha criada.</Copy>}
-    {app.session.campaigns.map((campaign) => <Card key={campaign.id}><Heading>{campaign.name}</Heading><Copy>Nível {campaign.party.level} • {campaign.party.characters.length} personagem(ns){app.campaign?.id === campaign.id ? ' • selecionada' : ''}</Copy><Button title="Selecionar campanha" disabled={app.busy} onPress={() => { void app.chooseCampaign(campaign.id).then((selected) => { if (selected) router.push('/'); }); }} /></Card>)}
+    {app.session.campaigns.map((campaign) => <Card key={campaign.id}><Heading>{campaign.name}</Heading><Copy>Nível {campaign.party.level} • {campaign.party.characters.length} personagem(ns){app.campaign?.id === campaign.id ? ' • selecionada' : ''}</Copy><Button title="Selecionar campanha" disabled={app.busy} onPress={() => { void app.chooseCampaign(campaign.id).then((selected) => { if (selected) router.dismissTo('/'); }); }} /></Card>)}
   </AppPage>;
 }

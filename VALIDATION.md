@@ -1,5 +1,7 @@
 # Validação e diagnóstico do ambiente
 
+**Registro histórico da fundação.** A auditoria posterior ampliou os testes para 95 e corrigiu regras, sessão e persistência. O estado atual está em [AUDIT_REPORT.md](AUDIT_REPORT.md); os números de 42 testes abaixo descrevem a execução anterior.
+
 Registro da sessão de desenvolvimento em **19/10/2026**. Não substitui CI ou validação em dispositivo.
 
 ## Conectividade

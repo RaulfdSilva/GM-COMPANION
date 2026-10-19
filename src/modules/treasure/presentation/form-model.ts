@@ -1,6 +1,6 @@
 import { failure } from '../../../shared/types/result.ts';
 import type { Result } from '../../../shared/types/result.ts';
-import { parseGoldInput } from '../domain/economy.ts';
+import { parseGoldInput } from './money.ts';
 import { CATEGORIES } from '../domain/models.ts';
 import type { ItemCategory, Rarity, TreasureGenerationConfig, TreasureTheme } from '../domain/models.ts';
 import { validateGenerationConfig } from '../domain/generator.ts';

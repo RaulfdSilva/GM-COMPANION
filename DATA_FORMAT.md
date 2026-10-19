@@ -2,7 +2,7 @@
 
 ## Importação
 
-No gerador, use **Importar catálogo local (.json)**. O seletor copia o arquivo para o cache; o aplicativo valida o texto, a estrutura Zod e a integridade semântica antes de persistir qualquer dado. Cancelar o seletor não é erro. Arquivos têm limite de 2 MB; até 5000 itens, 100 tabelas e 500 resoluções por catálogo. São limites operacionais de proteção do MVP.
+No gerador, use **Importar catálogo local (.json)**. O seletor copia o arquivo para o cache; o aplicativo valida o texto, a estrutura Zod e a integridade semântica antes de persistir qualquer dado. Cancelar o seletor não é erro. Arquivos têm limite de 2.000.000 bytes UTF-8 (2 MB); até 5000 itens, 100 tabelas e 500 resoluções por catálogo. São limites operacionais de proteção do MVP.
 
 O importador público recebe `unknown` (`importCatalog`) ou texto (`importCatalogText`) e devolve `Result<TreasureCatalog>`. JSON inválido, campos desconhecidos e estrutura inválida geram `validation`; não há fallback para catálogo fictício. A persistência só ocorre após validação. O catálogo importado fica isolado do demonstrativo; selecione-o explicitamente. A fonte real dos dados é a declarada no arquivo, mesmo quando seu armazenamento é privado/local.
 
@@ -19,7 +19,7 @@ Arquivo completo para começar: [examples/custom-catalog.json](examples/custom-c
 }
 ```
 
-O exemplo acima mostra a estrutura; `items` e `tables` precisam ter pelo menos uma entrada. Campos opcionais do conceito são representados explicitamente por `null`, arrays vazios ou objetos vazios. Campos extras são rejeitados para revelar erros de digitação.
+O exemplo acima mostra a estrutura; `items` e `tables` precisam ter pelo menos uma entrada. Campos opcionais do conceito são representados explicitamente por `null`, arrays vazios ou objetos vazios. Campos extras são rejeitados para revelar erros de digitação. Nomes, rótulos e campos de identificação são aparados; nomes/IDs vazios são recusados. Nomes de item têm até 1000 caracteres, compatíveis com o registro de concessões.
 
 ## Item
 

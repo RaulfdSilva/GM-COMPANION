@@ -3,14 +3,14 @@ import { useApp } from '../../../shared/app-context';
 import { Button, Card, Choices, Field, Heading, Notice } from '../../../shared/components/ui';
 import { RARITIES } from '../domain/models';
 import type { ItemRarity, TreasureAward } from '../domain/models';
-import { parseGoldInput } from '../domain/economy';
+import { formatGoldInput, parseGoldInput } from './money';
 import { rarityLabels } from '../../../shared/labels';
 export function AwardEditor({ award, onClose }: { award: TreasureAward; onClose: () => void }) {
   const app = useApp(); const [name, setName] = useState(award.itemName);
   const [rarity, setRarity] = useState<ItemRarity>(award.rarity);
   const [level, setLevel] = useState(String(award.partyLevel)); const [notes, setNotes] = useState(award.notes);
   const [date, setDate] = useState(award.awardedAt); const [variant, setVariant] = useState(award.variantLabel ?? '');
-  const [value, setValue] = useState(award.valueCopper === null ? '' : `${Math.floor(award.valueCopper / 100)}.${String(award.valueCopper % 100).padStart(2, '0')}`);
+  const [value, setValue] = useState(award.valueCopper === null ? '' : formatGoldInput(award.valueCopper));
   async function save() {
     const parsed = parseGoldInput(value);
     if (!parsed.ok) { app.reportError(parsed.error); return; }
@@ -18,9 +18,9 @@ export function AwardEditor({ award, onClose }: { award: TreasureAward; onClose:
     if (await app.updateAward({ ...award, itemName: name, rarity, partyLevel: Number(level), notes, awardedAt: date, variantLabel: variant.trim() || null, valueCopper: parsed.value })) onClose();
   }
   return <Card><Heading>Corrigir registro</Heading>
-    <Field label="Nome do item concedido" value={name} onChangeText={setName} maxLength={200} />
+    <Field label="Nome do item concedido" value={name} onChangeText={setName} maxLength={1000} />
     <Choices label="Raridade registrada" options={[...RARITIES, 'artifact' as const].map((option) => ({ value: option, label: rarityLabels[option] }))} value={rarity} onChange={setRarity} />
-    <Field label="Variante (opcional)" value={variant} onChangeText={setVariant} maxLength={200} />
+    <Field label="Variante (opcional)" value={variant} onChangeText={setVariant} maxLength={1000} />
     <Field label="Nível no momento da concessão" value={level} onChangeText={setLevel} keyboardType="number-pad" />
     <Field label="Valor em PO (vazio = desconhecido)" value={value} onChangeText={setValue} keyboardType="decimal-pad" />
     <Field label="Data de concessão (ISO 8601)" value={date} onChangeText={setDate} autoCapitalize="none" />

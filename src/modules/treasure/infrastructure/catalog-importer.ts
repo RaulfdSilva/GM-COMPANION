@@ -1,11 +1,13 @@
 import { z } from 'zod';
+import { utf8ByteLength } from '../../../shared/utils/utf8.ts';
+import { MAX_CATALOG_BYTES } from '../application/catalog-repository.ts';
 import { failure } from '../../../shared/types/result.ts';
 import type { Result } from '../../../shared/types/result.ts';
 import { CATEGORIES, RARITIES, THEMES } from '../domain/models.ts';
 import type { TreasureCatalog } from '../domain/models.ts';
 import { validateCatalog } from '../domain/catalog-validation.ts';
 const id = z.string().trim().min(1).max(120);
-const text = z.string().min(1).max(1000);
+const text = z.string().trim().min(1).max(1000);
 const copper = z.number().int().nonnegative().max(Number.MAX_SAFE_INTEGER);
 const source = z.object({ name: text, license: text, kind: z.enum(['original', 'srd', 'private']), attribution: z.string().max(2000) }).strict();
 const baseEquipment = z.object({ name: text, costCopper: copper.nullable() }).strict().nullable();
@@ -39,9 +41,8 @@ export function importCatalog(input: unknown): Result<TreasureCatalog> {
   if (!parsed.success) return failure('validation', 'O JSON não segue o formato de catálogo.', parsed.error.issues.map((issue) => `${issue.path.join('.')}: ${issue.message}`));
   return validateCatalog(parsed.data);
 }
-export const MAX_IMPORT_CHARACTERS = 2_000_000;
 export function importCatalogText(text: string): Result<TreasureCatalog> {
-  if (text.length > MAX_IMPORT_CHARACTERS) return failure('validation', 'O catálogo deve ter no máximo 2 MB de texto.');
+  if (text.length > MAX_CATALOG_BYTES || utf8ByteLength(text) > MAX_CATALOG_BYTES) return failure('validation', 'O catálogo deve ter no máximo 2 MB de texto.');
   let input: unknown;
   try { input = JSON.parse(text); } catch { return failure('validation', 'O arquivo não contém JSON válido.'); }
   return importCatalog(input);

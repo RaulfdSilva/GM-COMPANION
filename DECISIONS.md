@@ -41,3 +41,20 @@ A referência vale para a faixa inteira. Nenhum multiplicador por personagem é 
 O registro não pôde ser alcançado pelo proxy configurado. Após diagnóstico curto, não se repetiram instalações nem se desabilitou proxy/TLS. Foram criados fontes e testes e utilizados os recursos locais do Node 24. O modo de teste sem isolamento evita depender de subprocessos do test runner neste sandbox.
 
 As versões declaradas pertencem à linha conhecida do Expo SDK 54. Não houve consulta conclusiva ao registro, instalação, lockfile ou execução do Expo. Não se afirma compatibilidade final de patches/peers antes de `expo install --check` e `expo-doctor` em ambiente conectado.
+
+
+## 011 — Controlador de sessão testável fora do React
+
+A auditoria identificou coordenação de bootstrap, escrita, recarga e navegação concentrada no provider React. Foi extraído um controlador simples de snapshots/ações, sem biblioteca de estado adicional. Os contratos existentes de campanha/recompensa e o contrato de catálogo são injetados, assim como RNG, UUID e relógio. O provider apenas integra o ciclo de vida e a assinatura do estado. Isso permitiu reproduzir falhas de recarga e escrita concorrente sem fingir testes de componentes nativos.
+
+## 012 — Configurar a conexão antes de iniciar cada transação
+
+`foreign_keys` é um PRAGMA por conexão e não deve depender da conexão principal nem ser ativado após BEGIN. A transação passou a abrir uma conexão própria, configurar os PRAGMAs e usar BEGIN IMMEDIATE. O mesmo adaptador é exercitado com conexões SQLite reais nos testes Node; somente o fornecedor Expo das conexões permanece pendente de validação nativa. O formato do banco e as migrações existentes não foram alterados.
+
+## 013 — Confirmar gravação separadamente da recarga
+
+Falha ao reler o histórico não transforma uma gravação confirmada em falha. O estado distingue histórico atualizado de snapshot parcial e deixa a avaliação sem dados suficientes quando a recarga falha. Isso evita orientar um novo registro por engano ou calcular referência com dados desatualizados. Os tipos de erro do repositório são preservados. Falhas após COMMIT no fechamento da conexão são explicitadas e não garantem falsamente que nada foi salvo.
+
+## 014 — Validar parcelas e formatos nas fronteiras corretas
+
+O domínio passou a validar cada parcela de custo, além do total, mantendo desconhecidos explícitos. Formatação/entrada em PO foi movida para apresentação, sem dividir valores grandes para exibição. Campanhas usam o validador compartilhado de nível, sem depender da distribuição de tesouros. Datas agora exigem ISO com fuso e calendário válido. Essas decisões corrigem inconsistências, sem alterar as referências econômicas ou de balanceamento do produto.

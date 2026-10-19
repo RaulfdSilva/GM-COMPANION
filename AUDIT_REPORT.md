@@ -1,0 +1,94 @@
+# Auditoria técnica do MVP — 19/10/2026
+
+Base auditada: commit `4748caf`, branch `mvp/importacao-inicial`. Foram revisados os módulos de campanhas/tesouros, regras, repositórios, migrações, composição da aplicação, as seis telas, configurações, dados demonstrativos e testes. O trabalho adiciona correções e cobertura; não adiciona funcionalidades de produto.
+
+**Resultado:** 95 testes offline aprovados, 0 falhas; 53 cenários novos sobre a base de 42. A auditoria não comprova funcionamento do bundle Expo ou da interface nativa: dependências continuam ausentes e o proxy permanece inacessível.
+
+## Problemas encontrados e correções
+
+| Prioridade | Problema e efeito | Correção e evidência |
+|---|---|---|
+| Alta | O caso de uso aceitava histórico misto, alterando a avaliação com recompensas de outra campanha. | Filtragem explícita por campanha, com regressão determinística. |
+| Alta | O histórico mantinha um editor antigo ao trocar campanha; o controlador podia atualizar o registro da campanha anterior e carregar seu histórico sob a campanha atual. | Tela de histórico tem estado por campanha e editor derivado do registro atual. O controlador rejeita correção/exclusão de outra campanha antes da escrita. A guarda é testada em Node; o comportamento visual ainda precisa de teste nativo. |
+| Alta | Gravação bem-sucedida seguida de falha de recarga retornava fracasso, deixando formulário/estado inconsistentes e incentivando repetição. | Sucesso da escrita e estado da leitura são separados. Snapshot conhecido é mantido, histórico incompleto é sinalizado e novas avaliações recebem histórico indisponível. Há regressões para concessão, campanha e tipos de erro. |
+| Alta | Só a conexão principal habilitava FK; o teste anterior compartilhava uma única conexão e não verificava a invariável em transações com conexão própria. | Adaptador abre/configura cada conexão antes de BEGIN IMMEDIATE. Testes físicos verificam FK mesmo com a flag da conexão principal desligada, rollback e invisibilidade de gravações pendentes. Não se afirma que houve corrupção observada em Expo: a implementação nativa ainda não foi executada. |
+| Média | A exibição por divisão de cobre perdia centavos próximos ao limite seguro: `9007199254740991` aparecia como `90.071.992.547.409,9 PO`. | Parte inteira e resto são formatados separadamente; o valor agora é `90.071.992.547.409,91 PO`. Roundtrip de edição testado até MAX_SAFE_INTEGER. |
+| Média | O domínio validava apenas o total; uma parcela negativa/fracionária podia ser aceita quando o total resultava inteiro positivo. Custo de inscrição podia ser aplicado diretamente a outra categoria. | Validação de cada parcela e coerência de categoria no domínio e catálogo, independentemente do Zod. Testes cobrem negativos, frações, NaN, infinito, overflow, equipamento e variante. |
+| Média | Modos desconhecidos eram tratados implicitamente como automático/personalizado; IDs vazios/repetidos produziam resultados ambíguos e sobrescreviam avaliações. | Modos, relógio e unicidade de IDs são validados, com erro estruturado e sem lote parcial. |
+| Média | Date.parse aceitava datas inexistentes ou ambíguas; ordenar texto ISO com fusos diferentes não garante ordem cronológica. | Validação de calendário/horário/fuso; normalização de novas gravações em UTC e ordenação por instante. Registros inválidos não chegam à UI como dados válidos. |
+| Média | `save` retornava nomes não normalizados e podia devolver data de criação diferente da armazenada. | Retorno corresponde ao snapshot persistido; data original é preservada. Ambos os casos têm testes de integração. |
+| Média | Um erro ao fechar conexão ocultava o erro original da operação; mensagem de falha podia prometer que nenhum registro havia sido salvo mesmo após COMMIT. | As causas são preservadas na mensagem, e falhas após confirmação são identificadas. Mensagem orienta consultar o histórico antes de repetir. |
+| Média | Importador aceitava nome de item de 1000 caracteres, mas histórico só aceitava 200; nomes em branco também podiam passar. | Limites de nome alinhados no histórico/editor; nomes de catálogo são aparados e não podem ser vazios. A fronteira de concessão é testada; os testes Zod estão preparados e ainda não executados. |
+| Média | O limite textual de “2 MB” contava caracteres, não bytes UTF-8; metadados do seletor podiam subestimar o arquivo. | Contagem UTF-8 no importador e conferência do tamanho real no seletor. Helper Unicode testado sem TextEncoder ou dependência adicional. |
+| Baixa | IDs de personagens eram reassociados apenas pelo índice ao remover/reordenar linhas. | Modelo de formulário preserva correspondências por nome e posição disponível. Testes cobrem remoção, reordenação, renomeação, validação e colisões de IDs. |
+| Baixa | Retorno após salvar/selecionar empilhava novas telas de início; editor de histórico aparecia acima da lista, longe do registro escolhido. | Uso de `dismissTo('/')` e edição no lugar do registro. Correções estáticas; o teste de navegação no dispositivo permanece pendente. |
+| Baixa | Controles de opção anunciavam selected em vez de checked para radio, podiam ser acionados durante operação de catálogo e a página não ajustava margem ao teclado/safe area. | Estado checked/disabled, bloqueio do seletor, margem inferior e ajuste de teclado no ScrollView. Verificação com VoiceOver/TalkBack e Android/iOS ainda pendente. |
+
+Nove regressões gerais falharam antes das correções. Em seguida, dois novos cenários de integração reproduziram divergência da data de criação e perda do erro original no fechamento. As demais coberturas protegem os fluxos corrigidos ou regras existentes; não representam 53 bugs distintos.
+
+## Arquitetura, SOLID e Clean Code
+
+- Domínio e aplicação não importam React, Expo, SQLite, Zod, apresentação ou infraestrutura. O verificador de imports foi ampliado para ambas as camadas e procura ciclos estáticos. Nenhum ciclo foi encontrado no grafo inspecionado.
+- O provider React concentrava bootstrap, implementação de serviços, gestão de conexões e transições de negócio. A composição foi isolada em `bootstrap/open-app-services.ts`; o controlador testável fica em `application/app-controller.ts`, e o provider assina snapshots. Não foi adicionada biblioteca de estado nem framework genérico.
+- `CatalogRepository`/`StoredCatalog` passaram à aplicação, eliminando dependência de tipos concretos/inferidos da infraestrutura na coordenação da sessão.
+- A validação de nível de campanhas dependia da matriz de tesouros. Agora usa a regra pura compartilhada de nível. Não se criaram módulos futuros vazios.
+- Parsing/locale monetário saiu do domínio e passou a um helper de apresentação compartilhado pelo formulário, resultado, editor e histórico. Validação de parcelas econômicas tem implementação única reutilizada na integridade do catálogo.
+- O IIFE do sorteio personalizado e caminhos que ignoravam referências ausentes foram substituídos por helpers que retornam erros explícitos. O motor foi reorganizado para separar configuração, expansão, filtragem, seleção e resolução fiel.
+- Consultas continuam parametrizadas e fora das telas; operações compostas usam transação. Migrações e catálogo demonstrativo foram preservados, sem recriação de banco.
+- Permanece código visual antigo com linhas extensas. Sem Prettier não foi afirmada formatação aprovada nem feita reescrita ampla de JSX sem compilador. Isso é dívida de legibilidade, não evidência de falha funcional. O controlador e módulos críticos foram escritos em blocos menores e explícitos.
+
+## Sorteio e integridade auditados
+
+As quatro distribuições de raridade e referências de progressão coincidem com a especificação recebida. Não foi feita certificação editorial das regras em uma publicação oficial.
+
+Os testes verificam todas as 100 faces nos 20 níveis, as fronteiras de todas as 20 tabelas demonstrativas d100 e as fronteiras da segunda rolagem. No manual não há rolagem de raridade; no automático não há ressorteio quando falta tabela ou elegíveis. Um lote falho não retorna resultados parciais.
+
+A personalização preserva largura inclusiva do intervalo e probabilidade conjunta da resolução. Além do caso 10:2, há distribuição sintética com entrada direta de peso 30 e resolução de peso 70 em d4: folhas têm pesos 30, 17,5 e 52,5 (12:7:21). Depois do filtro, as folhas elegíveis mantêm razão 12:7. Não foi usado teste estatístico aleatório como prova: os cenários são determinísticos e inspecionam limites/contagens conhecidas.
+
+Lacunas, sobreposições, intervalos fracionários/invertidos/fora de 1–100, IDs duplicados, referências ausentes, incoerência de tema/raridade e resoluções incompletas são recusados conforme sua condição. Tabelas declaradas incompletas continuam identificadas e não são sorteadas.
+
+## Economia e balanceamento
+
+Moedas permanecem em cobre inteiro. Foram mantidos os cinco valores de referência, metade da referência para consumíveis não pergaminhos, custo explícito de inscrição, equipamento-base e acréscimos de item/variante. Equipamento de variante substitui a base; acréscimo soma. Desconhecido continua distinto de zero e só atravessa orçamento mediante opção explícita e aviso.
+
+O balanceamento permanece orientativo: faixa inteira, histórico da campanha, quantidade da raridade no lote, sem multiplicador por personagens. Referência exata é permitida; excedê-la produz alerta e não impede geração/concessão. Raridade igual não é tratada como poder igual. Histórico indisponível, níveis históricos inválidos e totais inseguros não geram falsa avaliação conclusiva.
+
+## Revisão das seis telas
+
+| Tela | Revisão/correção | Validação ainda necessária |
+|---|---|---|
+| Início | Resumo não apresenta histórico desconhecido como zero. Estados sem campanha permanecem tratados. | Navegação real, contraste e fontes ampliadas. |
+| Campanhas | Criação usa confirmação de escrita; seleção limpa resultado anterior; retorno evita empilhar início. | Toques repetidos, navegação por gesto/voltar e erro de armazenamento no dispositivo. |
+| Grupo | Validação pura compartilhada; IDs estáveis ao reorganizar nomes; retorno após gravação. | Teclado, campo multilinha e abandono de edição sem salvar. |
+| Gerador | Modos/filtros auditados; limites de importação coerentes; seletor bloqueado enquanto ocupado. | DocumentPicker, File, mensagens, controles e teclado decimal em Android/iOS. |
+| Resultado | Cobre exato na exibição; referências continuam orientativas; concessão confirmada não vira erro de escrita após falha de recarga. | Longos resultados, leitor de tela, concessão em lote e mensagens pós-gravação. |
+| Histórico | Estado/editor isolados por campanha; editor inline; totais omitidos quando leitura não é confiável; datas válidas e ordem cronológica. | Exclusão, correção, foco de acessibilidade, posição de rolagem e reinício do aplicativo. |
+
+## Verificações executadas
+
+| Verificação | Resultado |
+|---|---|
+| `npm run test:offline` | **95 aprovados, 0 falhas** em Node 24.19; inclui SQLite real e cenários compartilhados com Vitest. |
+| `npm run check:source` | **43 arquivos .ts** aceitos pelo parser do Node; imports locais/camadas/ciclos estáticos inspecionados. Não verifica tipos nem compila TSX. |
+| `git diff --check` | Sem erros de whitespace no diff. |
+| `npm run lint` | Bloqueado, exit 127: eslint não instalado. |
+| `npm run typecheck` | Bloqueado, exit 127: tsc não instalado. |
+| `npm test` | Bloqueado, exit 127: vitest não instalado. |
+| `npm run format:check` | Bloqueado, exit 127: prettier não instalado. |
+| Consulta curta ao npm | curl exit 7: falha de conexão ao proxy `proxy:8080`. Nenhuma dependência foi instalada. |
+| Expo/bundle/interface nativa | Não executados nesta auditoria; binários/dependências ausentes. |
+
+A suíte passou de 42 para 95 testes. Foram acrescentados 13 cenários de regressão geral, 16 de sessão, 9 de persistência, 6 de formulários/utilitários e 9 de regras/fronteiras. As fronteiras d100 do cenário existente foram ampliadas para as 20 tabelas. `tests/core.vitest.ts` usa os mesmos cenários. Os testes adicionais do importador Zod foram preparados, incluindo UTF-8 e nomes vazios, mas **não foram executados**.
+
+## Pendências e riscos residuais
+
+1. Restaurar o acesso ao proxy/npm. Instalar dependências e confirmar compatibilidade pelo `expo install --check` e `expo-doctor`. Continua sem lockfile gerado por instalação real.
+2. Executar typecheck strict, ESLint, Prettier e Vitest; corrigir falhas concretas. O parser do Node não prova ausência de erros de tipos/JSX, e o scanner de imports cobre apenas imports estáticos literais.
+3. Validar a API Expo SQLite com conexões novas no Android/iOS. O adaptador transacional comum está testado em Node; o binding nativo, permissões, fechamento de conexões e comportamento com app em segundo plano ainda não estão comprovados.
+4. Fazer a rodada manual das seis telas, incluindo teclado, acessibilidade, voltar, importação local e persistência após reinício. Não foram realizados testes de componentes, screenshots ou testes end-to-end.
+5. Registros antigos com datas ambíguas/custos inválidos serão sinalizados, sem exclusão ou reparo presumido. A correção desses dados requer revisão explícita; não foi adicionado reparador automático.
+6. Em falha excepcional depois de COMMIT, a mensagem informa confirmação/fechamento ou orienta consultar histórico. O controlador marca o histórico como indisponível também quando uma falha de escrita deixa o resultado incerto, até a próxima leitura. A operação não é cegamente repetida. O registro por ID continua protegendo contra duplicação de uma mesma concessão.
+7. Listas ainda são carregadas integralmente e campanhas fazem consulta de personagens por campanha. Não há evidência de gargalo no conjunto demonstrativo; medir em dispositivo com volume real antes de alterar essa simplicidade.
+8. Conteúdo continua demonstrativo/original. Não foram adicionados efeitos oficiais, imagens ou tabelas protegidas. A revisão técnica não certifica licenças declaradas em futuros catálogos privados.
+
+Não houve instalação, push, alteração de identidade Git ou modificação do repositório remoto. O novo commit é exclusivamente local na branch solicitada.

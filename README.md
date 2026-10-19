@@ -2,7 +2,7 @@
 
 MVP mobile offline, em português brasileiro, para preparar e registrar tesouros de campanhas de D&D. React Native, Expo Router, TypeScript strict e SQLite. Sem autenticação, backend ou serviços pagos.
 
-**Estado real em 19/10/2026:** fontes implementadas; instalação de dependências bloqueada pela conectividade do ambiente. O aplicativo ainda **não foi iniciado ou validado em celular**. Há 42 testes de domínio, aplicação e SQLite executados com Node 24 e aprovados. Vitest, Zod em execução, tsc, ESLint, Prettier e bundling Expo continuam pendentes. Veja [VALIDATION.md](VALIDATION.md).
+**Estado real em 19/10/2026:** fontes implementadas; instalação de dependências bloqueada pela conectividade do ambiente. O aplicativo ainda **não foi iniciado ou validado em celular**. Há 95 testes de domínio, aplicação, sessão, formulários e SQLite executados com Node 24 e aprovados. A auditoria ampliou a suíte original de 42 cenários sem adicionar funcionalidades. Veja [AUDIT_REPORT.md](AUDIT_REPORT.md). Vitest, importador Zod em execução, tsc, ESLint, Prettier e bundling Expo continuam pendentes. Veja [VALIDATION.md](VALIDATION.md).
 
 ## Executar sem dependências (verificações disponíveis)
 
@@ -58,6 +58,8 @@ A execução do bundle requer Metro durante desenvolvimento; o aplicativo nativo
 ```text
 src/
   app/                         # somente rotas e composição de navegação
+  application/                 # coordenação de sessão sem React
+  bootstrap/                   # composição de dependências de produção
   database/                    # contrato SQL, adaptador Expo e migrações
   modules/
     campaigns/
@@ -71,7 +73,7 @@ src/
       infrastructure/          # importador Zod, catálogos e repositórios
         data/                  # demonstração original, não catálogo oficial
       presentation/            # gerador, resultado e histórico
-  shared/                      # composição do aplicativo, UI e Result
+  shared/                      # adaptador React, UI, regras comuns e Result
 scripts/                       # checagem offline de fontes
 examples/                      # catálogo de exemplo importável
 tests/                         # cenários compartilhados, Vitest, Node e SQLite

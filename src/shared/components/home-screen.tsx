@@ -6,7 +6,7 @@ export function HomeScreen() {
   const app = useApp();
   return <AppPage title="A próxima descoberta">
     <Copy muted>Prepare tesouros, avalie a progressão e mantenha a memória da campanha. Tudo no seu dispositivo.</Copy>
-    <Card><Heading>{app.campaign?.name ?? 'Seu caderno está pronto'}</Heading><Copy>{app.campaign ? `Nível ${app.campaign.party.level} • ${app.campaign.party.characters.length} personagem(ns) • ${app.session.awards.length} recompensa(s)` : 'Comece criando uma campanha e configurando o grupo.'}</Copy>
+    <Card><Heading>{app.campaign?.name ?? 'Seu caderno está pronto'}</Heading><Copy>{app.campaign ? `Nível ${app.campaign.party.level} • ${app.campaign.party.characters.length} personagem(ns) • ${app.session.historyAvailable ? `${app.session.awards.length} recompensa(s)` : 'Histórico indisponível'}` : 'Comece criando uma campanha e configurando o grupo.'}</Copy>
       <Button title={app.campaign ? 'Gerar tesouros' : 'Criar campanha'} onPress={() => router.push(app.campaign ? '/generator' : '/campaigns')} />
     </Card>
     <Button title="Campanhas" secondary onPress={() => router.push('/campaigns')} />
