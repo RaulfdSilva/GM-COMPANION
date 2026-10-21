@@ -1,6 +1,9 @@
 /** Requires an unambiguous ISO timestamp and rejects dates normalized by Date.parse. */
 export function normalizeTimestamp(input: string): string | null {
-  const match = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d{1,3})?(Z|[+-]\d{2}:\d{2})$/.exec(input);
+  const match =
+    /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})(?:\.\d{1,3})?(Z|[+-]\d{2}:\d{2})$/.exec(
+      input,
+    );
   if (!match) return null;
   const year = Number(match[1]);
   const month = Number(match[2]);

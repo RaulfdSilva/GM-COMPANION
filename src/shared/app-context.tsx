@@ -11,16 +11,31 @@ type ContextValue = AppState & AppController['actions'] & { campaign: Campaign |
 const AppContext = createContext<ContextValue | null>(null);
 
 export function AppProvider({ children }: PropsWithChildren) {
-  const [controller] = useState(() => createAppController(openAppServices, {
-    random: Math.random, id: randomUUID, now: () => new Date().toISOString(),
-  }));
-  const state = useSyncExternalStore(controller.subscribe, controller.getSnapshot, controller.getSnapshot);
+  const [controller] = useState(() =>
+    createAppController(openAppServices, {
+      random: Math.random,
+      id: randomUUID,
+      now: () => new Date().toISOString(),
+    }),
+  );
+  const state = useSyncExternalStore(
+    controller.subscribe,
+    controller.getSnapshot,
+    controller.getSnapshot,
+  );
   useEffect(() => {
     void controller.start();
-    return () => { void controller.dispose(); };
+    return () => {
+      void controller.dispose();
+    };
   }, [controller]);
-  const campaign = state.session.campaigns.find((entry) => entry.id === state.session.activeId) ?? null;
-  return <AppContext.Provider value={{ ...state, ...controller.actions, campaign }}>{children}</AppContext.Provider>;
+  const campaign =
+    state.session.campaigns.find((entry) => entry.id === state.session.activeId) ?? null;
+  return (
+    <AppContext.Provider value={{ ...state, ...controller.actions, campaign }}>
+      {children}
+    </AppContext.Provider>
+  );
 }
 
 export function useApp() {

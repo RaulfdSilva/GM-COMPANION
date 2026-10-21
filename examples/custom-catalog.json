@@ -6,12 +6,7 @@
       "name": "Elixir da Centelha",
       "rarity": "common",
       "category": "Potion",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -33,12 +28,7 @@
       "name": "Anel da Centelha",
       "rarity": "common",
       "category": "Ring",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -60,12 +50,7 @@
       "name": "Bastão da Centelha",
       "rarity": "common",
       "category": "Rod",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -87,12 +72,7 @@
       "name": "Pergaminho da Centelha",
       "rarity": "common",
       "category": "Scroll",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -115,12 +95,7 @@
       "name": "Cajado da Centelha",
       "rarity": "common",
       "category": "Staff",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -142,12 +117,7 @@
       "name": "Varinha da Centelha",
       "rarity": "common",
       "category": "Wand",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -169,12 +139,7 @@
       "name": "Lâmina da Centelha",
       "rarity": "common",
       "category": "Weapon",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -199,12 +164,7 @@
       "name": "Armadura da Centelha",
       "rarity": "common",
       "category": "Armor",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -229,12 +189,7 @@
       "name": "Amuleto da Centelha",
       "rarity": "common",
       "category": "Wondrous Item",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {

@@ -1,7 +1,10 @@
 import type { AppServices } from '../application/app-services';
 import { openAppDatabase } from '../database/expo-database';
 import { createCampaignRepository } from '../modules/campaigns/infrastructure/sqlite-campaign-repository';
-import { importCatalog, importCatalogText } from '../modules/treasure/infrastructure/catalog-importer';
+import {
+  importCatalog,
+  importCatalogText,
+} from '../modules/treasure/infrastructure/catalog-importer';
 import { createAwardRepository } from '../modules/treasure/infrastructure/sqlite-award-repository';
 import { createCatalogRepository } from '../modules/treasure/infrastructure/sqlite-catalog-repository';
 import demo from '../modules/treasure/infrastructure/data/demo-catalog.json';
@@ -22,6 +25,10 @@ export async function openAppServices(): Promise<Result<AppServices>> {
       close: () => database.closeAsync(),
     });
   } catch (cause) {
-    return failure('persistence', 'Não foi possível abrir o banco. Os dados existentes foram preservados.', [errorMessage(cause)]);
+    return failure(
+      'persistence',
+      'Não foi possível abrir o banco. Os dados existentes foram preservados.',
+      [errorMessage(cause)],
+    );
   }
 }

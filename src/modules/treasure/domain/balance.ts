@@ -26,35 +26,50 @@ export function assessReward(input: AssessmentInput): BalanceAssessment {
   const insufficientData: string[] = [];
   if (!band) insufficientData.push('Nível inválido.');
   if (input.history === null) insufficientData.push('Histórico não informado.');
-  if (input.rarity === 'artifact') insufficientData.push('Artefatos não possuem referência nesta matriz.');
-  if (!Number.isSafeInteger(count) || count < 1) insufficientData.push('Quantidade proposta inválida.');
+  if (input.rarity === 'artifact')
+    insufficientData.push('Artefatos não possuem referência nesta matriz.');
+  if (!Number.isSafeInteger(count) || count < 1)
+    insufficientData.push('Quantidade proposta inválida.');
   if (input.history?.some((award) => !isPartyLevel(award.partyLevel))) {
     insufficientData.push('O histórico contém níveis inválidos.');
   }
-  const partySize = input.partySize !== null && Number.isSafeInteger(input.partySize) && input.partySize >= 0
-    ? input.partySize : null;
+  const partySize =
+    input.partySize !== null && Number.isSafeInteger(input.partySize) && input.partySize >= 0
+      ? input.partySize
+      : null;
   const unavailable = (): BalanceAssessment => ({
     classification: 'insufficientData',
     explanation: 'Não há dados suficientes para comparar a recompensa.',
-    rulesUsed, warnings, insufficientData, accumulated: null, reference: null, partySize,
+    rulesUsed,
+    warnings,
+    insufficientData,
+    accumulated: null,
+    reference: null,
+    partySize,
   });
   if (!band || input.history === null || input.rarity === 'artifact' || insufficientData.length) {
     return unavailable();
   }
   const reference = band.progression[RARITIES.indexOf(input.rarity)] ?? 0;
-  const accumulated = input.history.filter((award) =>
-    award.partyLevel >= band.min && award.partyLevel <= band.max && award.rarity === input.rarity,
+  const accumulated = input.history.filter(
+    (award) =>
+      award.partyLevel >= band.min && award.partyLevel <= band.max && award.rarity === input.rarity,
   ).length;
   const proposedTotal = accumulated + count;
   if (!Number.isSafeInteger(proposedTotal)) {
     insufficientData.push('Total acumulado fora do intervalo inteiro seguro.');
     return unavailable();
   }
-  const classification = reference === 0 ? 'unusual'
-    : proposedTotal > reference ? 'aboveReference' : 'withinReference';
+  const classification =
+    reference === 0 ? 'unusual' : proposedTotal > reference ? 'aboveReference' : 'withinReference';
   return {
     classification,
     explanation: `${accumulated} item(ns) desta raridade registrados na faixa ${band.min}–${band.max}; com ${count} proposto(s), serão ${proposedTotal}. Referência da faixa: ${reference}. Isso não é um limite rígido.`,
-    rulesUsed, warnings, insufficientData, accumulated, reference, partySize,
+    rulesUsed,
+    warnings,
+    insufficientData,
+    accumulated,
+    reference,
+    partySize,
   };
 }

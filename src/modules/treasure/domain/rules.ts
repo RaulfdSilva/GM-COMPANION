@@ -11,18 +11,26 @@ export const LEVEL_BANDS = [
 ] as const;
 export const COPPER_PER_GOLD = 100;
 export const REFERENCE_COPPER: Readonly<Record<Rarity, number>> = {
-  common: 100 * COPPER_PER_GOLD, uncommon: 400 * COPPER_PER_GOLD,
-  rare: 4000 * COPPER_PER_GOLD, veryRare: 40000 * COPPER_PER_GOLD,
+  common: 100 * COPPER_PER_GOLD,
+  uncommon: 400 * COPPER_PER_GOLD,
+  rare: 4000 * COPPER_PER_GOLD,
+  veryRare: 40000 * COPPER_PER_GOLD,
   legendary: 200000 * COPPER_PER_GOLD,
 };
 export type RandomSource = () => number;
-export const levelBand = (level: number) => isPartyLevel(level)
-  ? LEVEL_BANDS.find((band) => level >= band.min && level <= band.max) : undefined;
+export const levelBand = (level: number) =>
+  isPartyLevel(level)
+    ? LEVEL_BANDS.find((band) => level >= band.min && level <= band.max)
+    : undefined;
 export function rollDie(sides: number, random: RandomSource): Result<number> {
-  if (!Number.isSafeInteger(sides) || sides < 1) return failure('validation', 'O dado deve ter um número inteiro positivo de faces.');
+  if (!Number.isSafeInteger(sides) || sides < 1)
+    return failure('validation', 'O dado deve ter um número inteiro positivo de faces.');
   const value = random();
   if (!Number.isFinite(value) || value < 0 || value >= 1)
-    return failure('validation', 'Fonte aleatória inválida: esperado um valor entre 0 (inclusivo) e 1 (exclusivo).');
+    return failure(
+      'validation',
+      'Fonte aleatória inválida: esperado um valor entre 0 (inclusivo) e 1 (exclusivo).',
+    );
   return success(Math.floor(value * sides) + 1);
 }
 export function selectRarity(level: number, random: RandomSource): Result<Rarity> {

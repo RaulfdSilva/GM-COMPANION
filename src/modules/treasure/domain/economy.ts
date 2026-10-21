@@ -19,7 +19,9 @@ export function pricingIssues(item: MagicItem, variant: VariantParameters | null
   }
   if (variant) amounts.push(variant.additionalCostCopper);
   if (amounts.some((amount) => !isCopperAmount(amount))) {
-    issues.push('Cada parcela monetária deve ser um inteiro não negativo em cobre dentro do limite seguro.');
+    issues.push(
+      'Cada parcela monetária deve ser um inteiro não negativo em cobre dentro do limite seguro.',
+    );
   }
   return issues;
 }
@@ -51,7 +53,11 @@ export function calculateItemValue(
   if (base && base.costCopper === null) {
     return { kind: 'unknown', reason: `Custo do equipamento-base ${base.name} desconhecido.` };
   }
-  const total = copper + (base?.costCopper ?? 0) + item.additionalCostCopper + (variant?.additionalCostCopper ?? 0);
+  const total =
+    copper +
+    (base?.costCopper ?? 0) +
+    item.additionalCostCopper +
+    (variant?.additionalCostCopper ?? 0);
   return isCopperAmount(total)
     ? { kind: 'known', copper: total }
     : { kind: 'unknown', reason: 'Valor total fora do intervalo monetário seguro.' };

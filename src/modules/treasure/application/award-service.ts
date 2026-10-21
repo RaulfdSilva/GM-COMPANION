@@ -11,21 +11,46 @@ export interface AwardRepository {
   remove(id: string, campaignId: string): Promise<Result<void>>;
 }
 export function validateAward(award: TreasureAward): Result<never> | null {
-  if (!award.id || !award.campaignId || !award.itemId || !award.itemName.trim() || award.itemName.length > 1000)
+  if (
+    !award.id ||
+    !award.campaignId ||
+    !award.itemId ||
+    !award.itemName.trim() ||
+    award.itemName.length > 1000
+  )
     return failure('validation', 'Dados da recompensa incompletos.');
   if (!isPartyLevel(award.partyLevel) || ![...RARITIES, 'artifact'].includes(award.rarity))
     return failure('validation', 'Nível ou raridade inválidos.');
-  if (award.valueCopper !== null && (!Number.isSafeInteger(award.valueCopper) || award.valueCopper < 0))
+  if (
+    award.valueCopper !== null &&
+    (!Number.isSafeInteger(award.valueCopper) || award.valueCopper < 0)
+  )
     return failure('validation', 'Valor monetário inválido.');
   if (!normalizeTimestamp(award.awardedAt))
-    return failure('validation', 'Informe uma data ISO 8601 válida com horário e fuso, por exemplo 2026-10-19T12:00:00Z.');
-  if (award.notes.length > 2000) return failure('validation', 'As observações devem ter até 2000 caracteres.');
+    return failure(
+      'validation',
+      'Informe uma data ISO 8601 válida com horário e fuso, por exemplo 2026-10-19T12:00:00Z.',
+    );
+  if (award.notes.length > 2000)
+    return failure('validation', 'As observações devem ter até 2000 caracteres.');
   return null;
 }
-export function createAward(item: GeneratedItem, context: Readonly<{ id: string; campaignId: string; partyLevel: number; now: string }>): TreasureAward {
-  return { id: context.id, campaignId: context.campaignId, itemId: item.item.id, itemName: item.item.name,
-    rarity: item.rarity, variantLabel: item.variant?.label ?? null, valueCopper: item.value.kind === 'known' ? item.value.copper : null,
-    partyLevel: context.partyLevel, awardedAt: context.now, notes: '' };
+export function createAward(
+  item: GeneratedItem,
+  context: Readonly<{ id: string; campaignId: string; partyLevel: number; now: string }>,
+): TreasureAward {
+  return {
+    id: context.id,
+    campaignId: context.campaignId,
+    itemId: item.item.id,
+    itemName: item.item.name,
+    rarity: item.rarity,
+    variantLabel: item.variant?.label ?? null,
+    valueCopper: item.value.kind === 'known' ? item.value.copper : null,
+    partyLevel: context.partyLevel,
+    awardedAt: context.now,
+    notes: '',
+  };
 }
 export function rarityTotals(awards: readonly TreasureAward[]): Readonly<Record<string, number>> {
   const totals: Record<string, number> = {};

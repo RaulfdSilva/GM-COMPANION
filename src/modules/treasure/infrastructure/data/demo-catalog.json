@@ -6,12 +6,7 @@
       "name": "Elixir da Centelha",
       "rarity": "common",
       "category": "Potion",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -33,12 +28,7 @@
       "name": "Anel da Centelha",
       "rarity": "common",
       "category": "Ring",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -60,12 +50,7 @@
       "name": "Bastão da Centelha",
       "rarity": "common",
       "category": "Rod",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -87,12 +72,7 @@
       "name": "Pergaminho da Centelha",
       "rarity": "common",
       "category": "Scroll",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -115,12 +95,7 @@
       "name": "Cajado da Centelha",
       "rarity": "common",
       "category": "Staff",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -142,12 +117,7 @@
       "name": "Varinha da Centelha",
       "rarity": "common",
       "category": "Wand",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -169,12 +139,7 @@
       "name": "Lâmina da Centelha",
       "rarity": "common",
       "category": "Weapon",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -199,12 +164,7 @@
       "name": "Armadura da Centelha",
       "rarity": "common",
       "category": "Armor",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -229,12 +189,7 @@
       "name": "Amuleto da Centelha",
       "rarity": "common",
       "category": "Wondrous Item",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -256,12 +211,7 @@
       "name": "Elixir da Bruma",
       "rarity": "uncommon",
       "category": "Potion",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -283,12 +233,7 @@
       "name": "Anel da Bruma",
       "rarity": "uncommon",
       "category": "Ring",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -310,12 +255,7 @@
       "name": "Bastão da Bruma",
       "rarity": "uncommon",
       "category": "Rod",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -337,12 +277,7 @@
       "name": "Pergaminho da Bruma",
       "rarity": "uncommon",
       "category": "Scroll",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -365,12 +300,7 @@
       "name": "Cajado da Bruma",
       "rarity": "uncommon",
       "category": "Staff",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -392,12 +322,7 @@
       "name": "Varinha da Bruma",
       "rarity": "uncommon",
       "category": "Wand",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -419,12 +344,7 @@
       "name": "Lâmina da Bruma",
       "rarity": "uncommon",
       "category": "Weapon",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -449,12 +369,7 @@
       "name": "Armadura da Bruma",
       "rarity": "uncommon",
       "category": "Armor",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -479,12 +394,7 @@
       "name": "Amuleto da Bruma",
       "rarity": "uncommon",
       "category": "Wondrous Item",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -506,12 +416,7 @@
       "name": "Elixir da Aurora",
       "rarity": "rare",
       "category": "Potion",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -533,12 +438,7 @@
       "name": "Anel da Aurora",
       "rarity": "rare",
       "category": "Ring",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -560,12 +460,7 @@
       "name": "Bastão da Aurora",
       "rarity": "rare",
       "category": "Rod",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -587,12 +482,7 @@
       "name": "Pergaminho da Aurora",
       "rarity": "rare",
       "category": "Scroll",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -615,12 +505,7 @@
       "name": "Cajado da Aurora",
       "rarity": "rare",
       "category": "Staff",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -642,12 +527,7 @@
       "name": "Varinha da Aurora",
       "rarity": "rare",
       "category": "Wand",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -669,12 +549,7 @@
       "name": "Lâmina da Aurora",
       "rarity": "rare",
       "category": "Weapon",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -699,12 +574,7 @@
       "name": "Armadura da Aurora",
       "rarity": "rare",
       "category": "Armor",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -729,12 +599,7 @@
       "name": "Amuleto da Aurora",
       "rarity": "rare",
       "category": "Wondrous Item",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -756,12 +621,7 @@
       "name": "Elixir da Firmamento",
       "rarity": "veryRare",
       "category": "Potion",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -783,12 +643,7 @@
       "name": "Anel da Firmamento",
       "rarity": "veryRare",
       "category": "Ring",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -810,12 +665,7 @@
       "name": "Bastão da Firmamento",
       "rarity": "veryRare",
       "category": "Rod",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -837,12 +687,7 @@
       "name": "Pergaminho da Firmamento",
       "rarity": "veryRare",
       "category": "Scroll",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -865,12 +710,7 @@
       "name": "Cajado da Firmamento",
       "rarity": "veryRare",
       "category": "Staff",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -892,12 +732,7 @@
       "name": "Varinha da Firmamento",
       "rarity": "veryRare",
       "category": "Wand",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -919,12 +754,7 @@
       "name": "Lâmina da Firmamento",
       "rarity": "veryRare",
       "category": "Weapon",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -949,12 +779,7 @@
       "name": "Armadura da Firmamento",
       "rarity": "veryRare",
       "category": "Armor",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -979,12 +804,7 @@
       "name": "Amuleto da Firmamento",
       "rarity": "veryRare",
       "category": "Wondrous Item",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -1006,12 +826,7 @@
       "name": "Elixir da Eternidade",
       "rarity": "legendary",
       "category": "Potion",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -1033,12 +848,7 @@
       "name": "Anel da Eternidade",
       "rarity": "legendary",
       "category": "Ring",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -1060,12 +870,7 @@
       "name": "Bastão da Eternidade",
       "rarity": "legendary",
       "category": "Rod",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -1087,12 +892,7 @@
       "name": "Pergaminho da Eternidade",
       "rarity": "legendary",
       "category": "Scroll",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": true,
       "attunement": false,
       "pricing": {
@@ -1115,12 +915,7 @@
       "name": "Cajado da Eternidade",
       "rarity": "legendary",
       "category": "Staff",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -1142,12 +937,7 @@
       "name": "Varinha da Eternidade",
       "rarity": "legendary",
       "category": "Wand",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": true,
       "pricing": {
@@ -1169,12 +959,7 @@
       "name": "Lâmina da Eternidade",
       "rarity": "legendary",
       "category": "Weapon",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -1199,12 +984,7 @@
       "name": "Armadura da Eternidade",
       "rarity": "legendary",
       "category": "Armor",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {
@@ -1229,12 +1009,7 @@
       "name": "Amuleto da Eternidade",
       "rarity": "legendary",
       "category": "Wondrous Item",
-      "themes": [
-        "Arcana",
-        "Armaments",
-        "Implements",
-        "Relics"
-      ],
+      "themes": ["Arcana", "Armaments", "Implements", "Relics"],
       "consumable": false,
       "attunement": false,
       "pricing": {

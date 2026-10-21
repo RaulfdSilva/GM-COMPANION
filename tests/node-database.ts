@@ -12,7 +12,9 @@ export function openNodeDatabase(path?: string): AppDatabase & { close(): void }
   const main = new DatabaseSync(filename);
   function adapt(sqlite: DatabaseSync): ClosableSqlConnection {
     return {
-      async execAsync(sql) { sqlite.exec(sql); },
+      async execAsync(sql) {
+        sqlite.exec(sql);
+      },
       async runAsync(sql, ...params) {
         return { changes: Number(sqlite.prepare(sql).run(...params).changes) };
       },
@@ -22,7 +24,9 @@ export function openNodeDatabase(path?: string): AppDatabase & { close(): void }
       async getFirstAsync<T>(sql: string, ...params: SqlValue[]) {
         return (sqlite.prepare(sql).get(...params) as T | undefined) ?? null;
       },
-      async closeAsync() { sqlite.close(); },
+      async closeAsync() {
+        sqlite.close();
+      },
     };
   }
   const database = createSqliteDatabase(adapt(main), async () => adapt(new DatabaseSync(filename)));
@@ -33,5 +37,11 @@ export function openNodeDatabase(path?: string): AppDatabase & { close(): void }
     if (folder) rmSync(folder, { recursive: true, force: true });
     closed = true;
   }
-  return { ...database, close, async closeAsync() { close(); } };
+  return {
+    ...database,
+    close,
+    async closeAsync() {
+      close();
+    },
+  };
 }

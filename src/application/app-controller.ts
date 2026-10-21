@@ -32,15 +32,22 @@ type Outcome = Readonly<{ success: boolean; changes: Partial<AppState> }>;
 const rejected = (error: AppError): Outcome => ({ success: false, changes: { error } });
 function rejectedWrite(error: AppError, snapshot: AppState): Outcome {
   const uncertain = error.kind === 'persistence' || error.kind === 'unavailable';
-  return { success: false, changes: { error,
-    ...(uncertain ? { session: { ...snapshot.session, historyAvailable: false } } : {}) } };
+  return {
+    success: false,
+    changes: {
+      error,
+      ...(uncertain ? { session: { ...snapshot.session, historyAvailable: false } } : {}),
+    },
+  };
 }
 const validationError = (message: string): AppError => ({ kind: 'validation', message });
 
-async function loadSession(services: AppServices): Promise<Result<{
-  session: Session;
-  catalogs: readonly StoredCatalog[];
-}>> {
+async function loadSession(services: AppServices): Promise<
+  Result<{
+    session: Session;
+    catalogs: readonly StoredCatalog[];
+  }>
+> {
   const campaigns = await services.campaigns.list();
   if (!campaigns.ok) return campaigns;
   const catalogs = await services.catalogs.list();
@@ -49,7 +56,12 @@ async function loadSession(services: AppServices): Promise<Result<{
   const awards = first ? await services.awards.list(first.id) : success([]);
   if (!awards.ok) return awards;
   return success({
-    session: { campaigns: campaigns.value, activeId: first?.id ?? null, awards: awards.value, historyAvailable: true },
+    session: {
+      campaigns: campaigns.value,
+      activeId: first?.id ?? null,
+      awards: awards.value,
+      historyAvailable: true,
+    },
     catalogs: [services.originalCatalog, ...catalogs.value],
   });
 }
@@ -66,7 +78,13 @@ async function afterWrite(
     loaded = { ok: false, error: { kind: 'persistence', message: errorMessage(cause) } };
   }
   return loaded.ok
-    ? { success: true, changes: { ...changes, session: { ...session, awards: loaded.value, historyAvailable: true } } }
+    ? {
+        success: true,
+        changes: {
+          ...changes,
+          session: { ...session, awards: loaded.value, historyAvailable: true },
+        },
+      }
     : {
         success: true,
         changes: {
@@ -74,7 +92,8 @@ async function afterWrite(
           session: { ...session, historyAvailable: false },
           error: {
             kind: loaded.error.kind,
-            message: 'A alteração foi salva, mas o histórico não pôde ser atualizado. Selecione a campanha novamente para recarregar.',
+            message:
+              'A alteração foi salva, mas o histórico não pôde ser atualizado. Selecione a campanha novamente para recarregar.',
             details: [loaded.error.message, ...(loaded.error.details ?? [])],
           },
         },
@@ -84,9 +103,14 @@ async function afterWrite(
 /** Owns session transitions; React only subscribes and renders snapshots. */
 export function createAppController(open: OpenAppServices, dependencies: GenerationDependencies) {
   let state: AppState = {
-    ready: false, busy: false, error: null,
+    ready: false,
+    busy: false,
+    error: null,
     session: { campaigns: [], activeId: null, awards: [], historyAvailable: false },
-    catalogs: [], catalogId: 'demo', generation: null, awardedIds: [],
+    catalogs: [],
+    catalogId: 'demo',
+    generation: null,
+    awardedIds: [],
   };
   let services: AppServices | null = null;
   let revision = 0;
@@ -112,20 +136,42 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
       candidate = opened.value;
       const loaded = await loadSession(candidate);
       if (revision !== currentRevision) return;
-      if (!loaded.ok) { publish({ error: loaded.error }); return; }
+      if (!loaded.ok) {
+        publish({ error: loaded.error });
+        return;
+      }
       services = candidate;
       candidate = null;
-      publish({ ready: true, ...loaded.value, catalogId: services.originalCatalog.id, generation: null, awardedIds: [] });
+      publish({
+        ready: true,
+        ...loaded.value,
+        catalogId: services.originalCatalog.id,
+        generation: null,
+        awardedIds: [],
+      });
     } catch (cause) {
       if (revision === currentRevision) {
-        publish({ error: { kind: 'unavailable', message: 'Não foi possível iniciar o aplicativo.', details: [errorMessage(cause)] } });
+        publish({
+          error: {
+            kind: 'unavailable',
+            message: 'Não foi possível iniciar o aplicativo.',
+            details: [errorMessage(cause)],
+          },
+        });
       }
     } finally {
       if (candidate) {
-        try { await candidate.close(); }
-        catch (cause) {
+        try {
+          await candidate.close();
+        } catch (cause) {
           if (revision === currentRevision) {
-            publish({ error: { kind: 'persistence', message: 'A inicialização falhou e não foi possível fechar a conexão.', details: [state.error?.message ?? '', errorMessage(cause)] } });
+            publish({
+              error: {
+                kind: 'persistence',
+                message: 'A inicialização falhou e não foi possível fechar a conexão.',
+                details: [state.error?.message ?? '', errorMessage(cause)],
+              },
+            });
           }
         }
       }
@@ -133,7 +179,9 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
     }
   }
 
-  async function perform(work: (services: AppServices, snapshot: AppState) => Promise<Outcome>): Promise<boolean> {
+  async function perform(
+    work: (services: AppServices, snapshot: AppState) => Promise<Outcome>,
+  ): Promise<boolean> {
     if (!services || state.busy) return false;
     const currentServices = services;
     const currentRevision = revision;
@@ -147,7 +195,13 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
         return outcome.success;
       } catch (cause) {
         if (revision === currentRevision) {
-          publish({ error: { kind: 'unavailable', message: 'Não foi possível concluir a operação.', details: [errorMessage(cause)] } });
+          publish({
+            error: {
+              kind: 'unavailable',
+              message: 'Não foi possível concluir a operação.',
+              details: [errorMessage(cause)],
+            },
+          });
         }
         return false;
       } finally {
@@ -155,12 +209,17 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
       }
     })();
     activeOperation = operation;
-    try { return await operation; }
-    finally { if (activeOperation === operation) activeOperation = null; }
+    try {
+      return await operation;
+    } finally {
+      if (activeOperation === operation) activeOperation = null;
+    }
   }
 
   const actions = {
-    retry: () => { void start(); },
+    retry: () => {
+      void start();
+    },
     clearError: () => publish({ error: null }),
     reportError: (error: AppError) => publish({ error }),
     chooseCatalog(id: string) {
@@ -178,10 +237,19 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
         }
         const awards = await services.awards.list(id);
         if (!awards.ok) return rejected(awards.error);
-        return { success: true, changes: {
-          session: { ...snapshot.session, activeId: id, awards: awards.value, historyAvailable: true },
-          generation: null, awardedIds: [],
-        } };
+        return {
+          success: true,
+          changes: {
+            session: {
+              ...snapshot.session,
+              activeId: id,
+              awards: awards.value,
+              historyAvailable: true,
+            },
+            generation: null,
+            awardedIds: [],
+          },
+        };
       });
     },
     saveParty(campaign: Campaign) {
@@ -190,10 +258,16 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
         if (!saved.ok) return rejectedWrite(saved.error, snapshot);
         const exists = snapshot.session.campaigns.some((entry) => entry.id === saved.value.id);
         const campaigns = exists
-          ? snapshot.session.campaigns.map((entry) => entry.id === saved.value.id ? saved.value : entry)
+          ? snapshot.session.campaigns.map((entry) =>
+              entry.id === saved.value.id ? saved.value : entry,
+            )
           : [...snapshot.session.campaigns, saved.value];
-        const session = { ...snapshot.session, campaigns, activeId: saved.value.id,
-          awards: snapshot.session.activeId === saved.value.id ? snapshot.session.awards : [] };
+        const session = {
+          ...snapshot.session,
+          campaigns,
+          activeId: saved.value.id,
+          awards: snapshot.session.activeId === saved.value.id ? snapshot.session.awards : [],
+        };
         return afterWrite(services, session, { generation: null, awardedIds: [] });
       });
     },
@@ -206,13 +280,29 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
         return false;
       }
       try {
-        const result = generateForCampaign({ campaign, catalog: catalog.catalog, config,
-          history: state.session.historyAvailable ? state.session.awards : null }, dependencies);
-        if (!result.ok) { publish({ error: result.error }); return false; }
+        const result = generateForCampaign(
+          {
+            campaign,
+            catalog: catalog.catalog,
+            config,
+            history: state.session.historyAvailable ? state.session.awards : null,
+          },
+          dependencies,
+        );
+        if (!result.ok) {
+          publish({ error: result.error });
+          return false;
+        }
         publish({ generation: result.value, awardedIds: [], error: null });
         return true;
       } catch (cause) {
-        publish({ error: { kind: 'unavailable', message: 'Não foi possível realizar o sorteio.', details: [errorMessage(cause)] } });
+        publish({
+          error: {
+            kind: 'unavailable',
+            message: 'Não foi possível realizar o sorteio.',
+            details: [errorMessage(cause)],
+          },
+        });
         return false;
       }
     },
@@ -222,44 +312,78 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
         if (!generated || snapshot.session.activeId !== generated.campaignId) {
           return rejected(validationError('O resultado não pertence à campanha selecionada.'));
         }
-        const selected = generated.treasure.items.filter((item) => ids.includes(item.id) && !snapshot.awardedIds.includes(item.id));
+        const selected = generated.treasure.items.filter(
+          (item) => ids.includes(item.id) && !snapshot.awardedIds.includes(item.id),
+        );
         if (!ids.length || new Set(ids).size !== ids.length || selected.length !== ids.length) {
-          return rejected(validationError('Selecione apenas itens existentes que ainda não foram registrados.'));
+          return rejected(
+            validationError('Selecione apenas itens existentes que ainda não foram registrados.'),
+          );
         }
-        const awards = selected.map((item) => createAward(item, { id: item.id,
-          campaignId: generated.campaignId, partyLevel: generated.treasure.config.level, now: dependencies.now() }));
+        const awards = selected.map((item) =>
+          createAward(item, {
+            id: item.id,
+            campaignId: generated.campaignId,
+            partyLevel: generated.treasure.config.level,
+            now: dependencies.now(),
+          }),
+        );
         const result = await services.awards.add(awards);
         if (!result.ok) return rejectedWrite(result.error, snapshot);
-        return afterWrite(services, { ...snapshot.session, awards: [...awards, ...snapshot.session.awards] },
-          { awardedIds: [...snapshot.awardedIds, ...ids] });
+        return afterWrite(
+          services,
+          { ...snapshot.session, awards: [...awards, ...snapshot.session.awards] },
+          { awardedIds: [...snapshot.awardedIds, ...ids] },
+        );
       });
     },
     updateAward(award: TreasureAward) {
       return perform(async (services, snapshot) => {
-        if (snapshot.session.activeId !== award.campaignId) return rejected(validationError('O registro pertence a outra campanha.'));
+        if (snapshot.session.activeId !== award.campaignId)
+          return rejected(validationError('O registro pertence a outra campanha.'));
         const result = await services.awards.update(award);
         if (!result.ok) return rejectedWrite(result.error, snapshot);
-        return afterWrite(services, { ...snapshot.session,
-          awards: snapshot.session.awards.map((entry) => entry.id === award.id ? award : entry) });
+        return afterWrite(services, {
+          ...snapshot.session,
+          awards: snapshot.session.awards.map((entry) => (entry.id === award.id ? award : entry)),
+        });
       });
     },
     removeAward(award: TreasureAward) {
       return perform(async (services, snapshot) => {
-        if (snapshot.session.activeId !== award.campaignId) return rejected(validationError('O registro pertence a outra campanha.'));
+        if (snapshot.session.activeId !== award.campaignId)
+          return rejected(validationError('O registro pertence a outra campanha.'));
         const result = await services.awards.remove(award.id, award.campaignId);
         if (!result.ok) return rejectedWrite(result.error, snapshot);
-        return afterWrite(services, { ...snapshot.session, awards: snapshot.session.awards.filter((entry) => entry.id !== award.id) },
-          { awardedIds: snapshot.awardedIds.filter((id) => id !== award.id) });
+        return afterWrite(
+          services,
+          {
+            ...snapshot.session,
+            awards: snapshot.session.awards.filter((entry) => entry.id !== award.id),
+          },
+          { awardedIds: snapshot.awardedIds.filter((id) => id !== award.id) },
+        );
       });
     },
     importText(text: string, name: string) {
       return perform(async (services, snapshot) => {
         const parsed = services.parseCatalog(text);
         if (!parsed.ok) return rejected(parsed.error);
-        const saved = await services.catalogs.save({ id: dependencies.id(), name, catalog: parsed.value });
+        const saved = await services.catalogs.save({
+          id: dependencies.id(),
+          name,
+          catalog: parsed.value,
+        });
         if (!saved.ok) return rejected(saved.error);
-        return { success: true, changes: { catalogs: [...snapshot.catalogs, saved.value],
-          catalogId: saved.value.id, generation: null, awardedIds: [] } };
+        return {
+          success: true,
+          changes: {
+            catalogs: [...snapshot.catalogs, saved.value],
+            catalogId: saved.value.id,
+            generation: null,
+            awardedIds: [],
+          },
+        };
       });
     },
   };
@@ -270,7 +394,9 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
     getSnapshot: () => state,
     subscribe(listener: () => void) {
       listeners.add(listener);
-      return () => { listeners.delete(listener); };
+      return () => {
+        listeners.delete(listener);
+      };
     },
     async dispose(): Promise<void> {
       const currentRevision = ++revision;
@@ -278,9 +404,17 @@ export function createAppController(open: OpenAppServices, dependencies: Generat
       services = null;
       publish({ ready: false, busy: false });
       if (activeOperation) await activeOperation;
-      try { await closing?.close(); }
-      catch (cause) {
-        if (revision === currentRevision) publish({ error: { kind: 'persistence', message: 'Não foi possível fechar o banco.', details: [errorMessage(cause)] } });
+      try {
+        await closing?.close();
+      } catch (cause) {
+        if (revision === currentRevision)
+          publish({
+            error: {
+              kind: 'persistence',
+              message: 'Não foi possível fechar o banco.',
+              details: [errorMessage(cause)],
+            },
+          });
       }
     },
   };

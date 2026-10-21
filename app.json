@@ -7,8 +7,8 @@
     "scheme": "dmcompanion",
     "userInterfaceStyle": "automatic",
     "plugins": ["expo-router", "expo-sqlite", "expo-document-picker"],
-    "experiments": {"typedRoutes": true},
-    "ios": {"supportsTablet": true},
-    "android": {"package": "com.dmcompanion.app"}
+    "experiments": { "typedRoutes": true },
+    "ios": { "supportsTablet": true },
+    "android": { "package": "com.dmcompanion.app" }
   }
 }

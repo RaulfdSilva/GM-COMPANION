@@ -19,15 +19,15 @@ Não houve novas tentativas de instalar pacotes depois de confirmado o bloqueio.
 
 ## Executado
 
-| Comando | Resultado observado |
-|---|---|
-| `npm run test:offline` | **42 testes aprovados**, 0 falhas |
+| Comando                         | Resultado observado                                                                                                    |
+| ------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `npm run test:offline`          | **42 testes aprovados**, 0 falhas                                                                                      |
 | `node scripts/check-source.mjs` | **28 arquivos .ts** aceitos pelo parser do Node; imports locais resolvidos e fronteiras básicas de domínio verificadas |
-| `npm run lint` | bloqueado: `eslint: not found` |
-| `npm run typecheck` | bloqueado: `tsc: not found` |
-| `npm test` | bloqueado: `vitest: not found` |
-| `npm run format:check` | bloqueado: `prettier: not found` |
-| `npm start -- --offline` | bloqueado: `expo: not found` |
+| `npm run lint`                  | bloqueado: `eslint: not found`                                                                                         |
+| `npm run typecheck`             | bloqueado: `tsc: not found`                                                                                            |
+| `npm test`                      | bloqueado: `vitest: not found`                                                                                         |
+| `npm run format:check`          | bloqueado: `prettier: not found`                                                                                       |
+| `npm start -- --offline`        | bloqueado: `expo: not found`                                                                                           |
 
 O parser do Node remove tipos; **não verifica tipos TypeScript** e não compila TSX. A inspeção de imports não substitui ESLint. Não existe alegação de que lint, typecheck, Vitest, Zod, JSX ou Expo passaram. O formato final também aguarda Prettier.
 

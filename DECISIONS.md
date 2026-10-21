@@ -42,7 +42,6 @@ O registro não pôde ser alcançado pelo proxy configurado. Após diagnóstico 
 
 As versões declaradas pertencem à linha conhecida do Expo SDK 54. Não houve consulta conclusiva ao registro, instalação, lockfile ou execução do Expo. Não se afirma compatibilidade final de patches/peers antes de `expo install --check` e `expo-doctor` em ambiente conectado.
 
-
 ## 011 — Controlador de sessão testável fora do React
 
 A auditoria identificou coordenação de bootstrap, escrita, recarga e navegação concentrada no provider React. Foi extraído um controlador simples de snapshots/ações, sem biblioteca de estado adicional. Os contratos existentes de campanha/recompensa e o contrato de catálogo são injetados, assim como RNG, UUID e relógio. O provider apenas integra o ciclo de vida e a assinatura do estado. Isso permitiu reproduzir falhas de recarga e escrita concorrente sem fingir testes de componentes nativos.

@@ -7,7 +7,10 @@ export function parseGoldInput(input: string): Result<number | null> {
   if (!input.trim()) return success(null);
   const normalized = input.trim().replace(',', '.');
   if (!/^\d+(\.\d{1,2})?$/.test(normalized)) {
-    return failure('validation', 'Informe PO sem separador de milhar e com até duas casas decimais.');
+    return failure(
+      'validation',
+      'Informe PO sem separador de milhar e com até duas casas decimais.',
+    );
   }
   const [whole = '0', decimals = ''] = normalized.split('.');
   const copper = Number(whole) * COPPER_PER_GOLD + Number(decimals.padEnd(2, '0'));

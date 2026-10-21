@@ -1,6 +1,9 @@
 import type { CampaignRepository } from '../modules/campaigns/application/campaign-service.ts';
 import type { AwardRepository } from '../modules/treasure/application/award-service.ts';
-import type { CatalogRepository, StoredCatalog } from '../modules/treasure/application/catalog-repository.ts';
+import type {
+  CatalogRepository,
+  StoredCatalog,
+} from '../modules/treasure/application/catalog-repository.ts';
 import type { TreasureCatalog } from '../modules/treasure/domain/models.ts';
 import type { Result } from '../shared/types/result.ts';
 

@@ -9,11 +9,11 @@ O aplicativo não apresenta a comparação quantitativa do histórico como regra
 ## Raridade
 
 | Níveis | Comum | Incomum | Raro | Muito raro | Lendário |
-|---|---:|---:|---:|---:|---:|
-| 1–4 | 54 | 37 | 9 | 0 | 0 |
-| 5–10 | 30 | 51 | 17 | 2 | 0 |
-| 11–16 | 11 | 23 | 36 | 23 | 7 |
-| 17–20 | 0 | 0 | 20 | 44 | 36 |
+| ------ | ----: | ------: | ---: | ---------: | -------: |
+| 1–4    |    54 |      37 |    9 |          0 |        0 |
+| 5–10   |    30 |      51 |   17 |          2 |        0 |
+| 11–16  |    11 |      23 |   36 |         23 |        7 |
+| 17–20  |     0 |       0 |   20 |         44 |       36 |
 
 O automático rola um d100 em intervalos cumulativos inclusivos. Valores zero não criam intervalo. O modo manual não consome uma rolagem de raridade e permite qualquer uma das cinco raridades; probabilidade usual zero gera aviso sem bloqueio. Artefatos podem ser descritos/importados, mas não entram nas cinco raridades sorteáveis.
 
@@ -41,13 +41,13 @@ Categorias são um checklist com ao menos uma opção. Quantidade é inteira ent
 
 Todos os valores armazenados e calculados usam cobre inteiro: 1 PO = 100 unidades. A entrada de PO aceita até duas casas decimais, vírgula ou ponto, sem separador de milhares. O parse converte dígitos separadamente para não depender de arredondamento binário.
 
-| Raridade | PO | Cobre |
-|---|---:|---:|
-| Comum | 100 | 10000 |
-| Incomum | 400 | 40000 |
-| Raro | 4000 | 400000 |
-| Muito raro | 40000 | 4000000 |
-| Lendário | 200000 | 20000000 |
+| Raridade   |     PO |    Cobre |
+| ---------- | -----: | -------: |
+| Comum      |    100 |    10000 |
+| Incomum    |    400 |    40000 |
+| Raro       |   4000 |   400000 |
+| Muito raro |  40000 |  4000000 |
+| Lendário   | 200000 | 20000000 |
 
 ```text
 referência ajustada + equipamento-base + acréscimo do item + acréscimo da variante
@@ -62,11 +62,11 @@ Desconhecido nunca é zero. Com limite de valor, itens desconhecidos são exclu�
 ## Avaliação de progressão
 
 | Níveis | Comum | Incomum | Raro | Muito raro | Lendário |
-|---|---:|---:|---:|---:|---:|
-| 1–4 | 6 | 4 | 1 | 0 | 0 |
-| 5–10 | 10 | 17 | 6 | 1 | 0 |
-| 11–16 | 3 | 7 | 11 | 7 | 2 |
-| 17–20 | 0 | 0 | 5 | 11 | 9 |
+| ------ | ----: | ------: | ---: | ---------: | -------: |
+| 1–4    |     6 |       4 |    1 |          0 |        0 |
+| 5–10   |    10 |      17 |    6 |          1 |        0 |
+| 11–16  |     3 |       7 |   11 |          7 |        2 |
+| 17–20  |     0 |       0 |    5 |         11 |        9 |
 
 São referências acumuladas para a faixa inteira, não metas de cada nível. O motor conta concessões da mesma raridade com nível registrado dentro da faixa atual. Recompensas de faixas anteriores permanecem no histórico mas não são adicionadas à contagem da faixa atual.
 

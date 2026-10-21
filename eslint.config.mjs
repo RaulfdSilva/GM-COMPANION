@@ -5,6 +5,12 @@ export default tseslint.config(
   { ignores: ['node_modules/**', '.expo/**', 'dist/**', 'coverage/**'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
-  { files: ['**/*.ts', '**/*.tsx'], rules: { '@typescript-eslint/no-explicit-any': 'error', '@typescript-eslint/consistent-type-imports': 'error' } },
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'error',
+      '@typescript-eslint/consistent-type-imports': 'error',
+    },
+  },
   prettier,
 );

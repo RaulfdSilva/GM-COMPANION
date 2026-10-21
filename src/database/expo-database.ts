@@ -12,8 +12,11 @@ export async function openAppDatabase(): Promise<AppDatabase> {
     await migrateDatabase(database);
     return database;
   } catch (cause) {
-    try { await database.closeAsync(); }
-    catch (closeError) { throw new Error(`Abertura: ${errorMessage(cause)}; fechamento: ${errorMessage(closeError)}`); }
+    try {
+      await database.closeAsync();
+    } catch (closeError) {
+      throw new Error(`Abertura: ${errorMessage(cause)}; fechamento: ${errorMessage(closeError)}`);
+    }
     throw cause;
   }
 }

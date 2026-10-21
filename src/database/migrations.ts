@@ -1,6 +1,8 @@
 import type { AppDatabase } from './connection.ts';
 export const MIGRATIONS = [
-  { version: 1, sql: `
+  {
+    version: 1,
+    sql: `
     CREATE TABLE campaigns (
       id TEXT PRIMARY KEY NOT NULL,
       name TEXT NOT NULL CHECK(length(trim(name)) > 0),
@@ -25,22 +27,27 @@ export const MIGRATIONS = [
       notes TEXT NOT NULL DEFAULT ''
     );
     CREATE INDEX awards_campaign_date ON treasure_awards(campaign_id, awarded_at DESC);
-  ` },
-  { version: 2, sql: `
+  `,
+  },
+  {
+    version: 2,
+    sql: `
     CREATE TABLE imported_catalogs (
       id TEXT PRIMARY KEY NOT NULL,
       name TEXT NOT NULL,
       payload TEXT NOT NULL,
       imported_at TEXT NOT NULL
     );
-  ` },
+  `,
+  },
 ] as const;
 export async function migrateDatabase(database: AppDatabase): Promise<void> {
   await database.execAsync('PRAGMA foreign_keys = ON; PRAGMA journal_mode = WAL;');
   await database.transaction(async (connection) => {
     const current = await connection.getFirstAsync<{ user_version: number }>('PRAGMA user_version');
     const version = current?.user_version ?? 0;
-    if (version > MIGRATIONS.length) throw new Error('Banco criado por uma versão mais recente do aplicativo.');
+    if (version > MIGRATIONS.length)
+      throw new Error('Banco criado por uma versão mais recente do aplicativo.');
     for (const migration of MIGRATIONS) {
       if (migration.version <= version) continue;
       await connection.execAsync(migration.sql);

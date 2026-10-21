@@ -20,8 +20,9 @@ async function executeTransaction<T>(
     await connection.execAsync('COMMIT');
     return value;
   } catch (cause) {
-    try { await connection.execAsync('ROLLBACK'); }
-    catch (rollbackError) {
+    try {
+      await connection.execAsync('ROLLBACK');
+    } catch (rollbackError) {
       throw new Error(`Falha: ${errorMessage(cause)}; rollback: ${errorMessage(rollbackError)}`);
     }
     throw cause;
@@ -42,11 +43,17 @@ export function createSqliteDatabase(
     async transaction<T>(work: (connection: SqlConnection) => Promise<T>): Promise<T> {
       const connection = await openConnection();
       let outcome: TransactionOutcome<T>;
-      try { outcome = { ok: true, value: await executeTransaction(connection, work) }; }
-      catch (cause) { outcome = { ok: false, cause }; }
-      try { await connection.closeAsync(); }
-      catch (closeError) {
-        const context = outcome.ok ? 'A transação foi confirmada' : `Falha: ${errorMessage(outcome.cause)}`;
+      try {
+        outcome = { ok: true, value: await executeTransaction(connection, work) };
+      } catch (cause) {
+        outcome = { ok: false, cause };
+      }
+      try {
+        await connection.closeAsync();
+      } catch (closeError) {
+        const context = outcome.ok
+          ? 'A transação foi confirmada'
+          : `Falha: ${errorMessage(outcome.cause)}`;
         throw new Error(`${context}; fechamento da conexão: ${errorMessage(closeError)}`);
       }
       if (!outcome.ok) throw outcome.cause;
