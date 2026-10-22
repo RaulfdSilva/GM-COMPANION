@@ -6,9 +6,25 @@
     "orientation": "portrait",
     "scheme": "dmcompanion",
     "userInterfaceStyle": "automatic",
-    "plugins": ["expo-router", "expo-sqlite", "expo-document-picker"],
-    "experiments": { "typedRoutes": true },
-    "ios": { "supportsTablet": true },
-    "android": { "package": "com.dmcompanion.app" }
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-document-picker"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.dmcompanion.app"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "568978fe-aa28-4eba-8b4f-b83ba1f0da8c"
+      }
+    }
   }
 }
